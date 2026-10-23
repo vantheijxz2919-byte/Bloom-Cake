@@ -435,7 +435,7 @@ export const HomeScreen: React.FC = () => {
               </div>
               <h3 className="font-headline-md text-lg font-bold text-on-surface">Hộp Giữ Nhiệt 30-45 Phút</h3>
               <p className="font-body-md text-sm text-on-surface-variant leading-relaxed">
-                Bánh lạnh được đóng thùng xốp chuyên dụng với túi gel đá khô. Bánh croissant được giữ trong hộp thông khí chống đọng sương, giao nguyên vẹn đến các resort Nha Trang &amp; Nha Trang.
+                Bánh lạnh được đóng thùng xốp chuyên dụng với túi gel đá khô. Bánh croissant được giữ trong hộp thông khí chống đọng sương, giao nguyên vẹn đến các resort dọc bờ biển Trần Phú, Nha Trang.
               </p>
               <div className="flex items-center gap-2 text-primary font-label-md text-xs font-bold pt-1">
                 <span className="material-symbols-outlined text-[18px]">check_circle</span>
@@ -446,7 +446,7 @@ export const HomeScreen: React.FC = () => {
         </div>
       </section>
 
-      {/* 6 BRANCHES IN DA NANG MAP & OVERVIEW */}
+      {/* 6 BRANCHES IN NHA TRANG MAP & OVERVIEW */}
       <section className="w-full py-16 lg:py-24 px-4 sm:px-8 bg-surface">
         <div className="max-w-[1280px] mx-auto space-y-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">

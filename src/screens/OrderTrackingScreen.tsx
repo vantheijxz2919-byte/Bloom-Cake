@@ -370,7 +370,7 @@ export const OrderTrackingScreen: React.FC = () => {
                         <div className="space-y-0.5">
                           <div className="flex items-center gap-1.5 font-label-sm text-[11px] text-primary-fixed font-bold">
                             <span className="w-2 h-2 rounded-full bg-primary-fixed animate-ping"></span>
-                            <span>LỘ TRÌNH HỎA TỐC BIỂN MỸ KHÊ</span>
+                            <span>LỘ TRÌNH HỎA TỐC BIỂN NHA TRANG</span>
                           </div>
                           <p className="font-headline-sm text-sm font-bold text-white">
                             {order.branchName} → {order.deliveryAddress.split(',')[0]}
@@ -514,7 +514,7 @@ export const OrderTrackingScreen: React.FC = () => {
                     <div className="truncate pr-2">
                       <span className="font-label-sm text-[10px] text-outline block font-bold">CHỦ TÀI KHOẢN</span>
                       <span className="font-label-md text-xs text-on-surface truncate font-semibold">
-                        CONG TY TNHH BLOOM CAKE &amp; COFFE DA NANG
+                        CONG TY TNHH BLOOM CAKE &amp; COFFE NHA TRANG
                       </span>
                     </div>
                   </div>

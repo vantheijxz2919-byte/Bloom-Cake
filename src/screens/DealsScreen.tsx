@@ -54,7 +54,7 @@ export const DealsScreen: React.FC = () => {
             <div className="lg:col-span-7 space-y-4">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md text-xs font-bold shadow-sm -rotate-1">
                 <span className="material-symbols-outlined text-[18px]">local_fire_department</span>
-                <span>GASTRO POP DEALS • MÙA HÈ ĐÀ NẴNG</span>
+                <span>GASTRO POP DEALS • MÙA HÈ NHA TRANG</span>
               </div>
               <h1 className="font-headline-lg text-4xl lg:text-5xl text-on-surface tracking-tight leading-tight">
                 <span className="font-display-custom font-bold">Thưởng Thức Vị Ngọt</span> <br />

@@ -220,7 +220,7 @@ export const AuthScreen: React.FC = () => {
                 <span className="material-symbols-outlined text-primary text-base">pin_drop</span>
                 Hàn Thuyên • Trần Phú • Lê Hồng Phong
               </span>
-              <span className="font-semibold text-primary">#BloomBakeryDaNang</span>
+              <span className="font-semibold text-primary">#BloomBakeryNhaTrang</span>
             </div>
           </section>
 
