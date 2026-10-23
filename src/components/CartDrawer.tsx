@@ -28,7 +28,7 @@ export const CartDrawer: React.FC = () => {
   const [voucherInput, setVoucherInput] = useState('');
   const [customerName, setCustomerName] = useState('Nguyễn Phương Linh');
   const [customerPhone, setCustomerPhone] = useState('0918 452 889');
-  const [deliveryAddress, setDeliveryAddress] = useState('36 Lâm Hoành, P. Phước Mỹ, Q. Sơn Trà, TP. Đà Nẵng');
+  const [deliveryAddress, setDeliveryAddress] = useState('32-34 Trần Phú, Nha Trang, Khánh Hòa');
   const [customerNotes, setCustomerNotes] = useState('');
 
   if (!isCartOpen) return null;
@@ -180,7 +180,7 @@ export const CartDrawer: React.FC = () => {
                     type="text"
                     value={voucherInput}
                     onChange={(e) => setVoucherInput(e.target.value)}
-                    placeholder="Nhập mã ưu đãi (ví dụ: DANANGSWEET)"
+                    placeholder="Nhập mã ưu đãi (ví dụ: NHATRANGSWEET)"
                     className="flex-1 px-3.5 py-2 rounded-xl bg-surface-container-low text-xs border border-outline-variant/40 focus:outline-none focus:border-primary uppercase font-bold"
                   />
                   <button
@@ -246,8 +246,8 @@ export const CartDrawer: React.FC = () => {
                         className="w-full bg-surface-container-lowest text-on-surface text-xs rounded-xl px-2.5 py-1.5 border border-outline-variant/30 focus:outline-none focus:ring-1 focus:ring-primary"
                       >
                         {BRANCHES.map((b) => (
-                          <option key={b.id} value={`${b.name}, Q. ${b.districtName}`}>
-                            {b.number}. {b.name}, Q. {b.districtName} ({b.hours})
+                          <option key={b.id} value={`${b.name}, Khu vực ${b.districtName}`}>
+                            {b.number}. {b.name}, Khu vực {b.districtName} ({b.hours})
                           </option>
                         ))}
                       </select>
@@ -299,8 +299,8 @@ export const CartDrawer: React.FC = () => {
                         className="w-full bg-surface-container-lowest text-on-surface text-xs rounded-xl px-2.5 py-1.5 border border-outline-variant/30 focus:outline-none focus:ring-1 focus:ring-primary"
                       >
                         {BRANCHES.map((b) => (
-                          <option key={b.id} value={`${b.name}, Q. ${b.districtName}`}>
-                            {b.number}. {b.name}, Q. {b.districtName}
+                          <option key={b.id} value={`${b.name}, Khu vực ${b.districtName}`}>
+                            {b.number}. {b.name}, Khu vực {b.districtName}
                           </option>
                         ))}
                       </select>
@@ -310,7 +310,7 @@ export const CartDrawer: React.FC = () => {
                       type="text"
                       value={deliveryAddress}
                       onChange={(e) => setDeliveryAddress(e.target.value)}
-                      placeholder="Địa chỉ giao (KS / Resort / Nhà riêng tại Đà Nẵng)"
+                      placeholder="Địa chỉ giao (KS / Resort / Nhà riêng tại Nha Trang)"
                       className="w-full px-2.5 py-1.5 rounded-xl bg-surface-container-lowest text-xs border border-outline-variant/30"
                     />
 

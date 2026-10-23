@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
+import { BRANCHES } from '../data/mockData';
 
 export const Footer: React.FC = () => {
   const { setCurrentScreen, showToast } = useApp();
@@ -66,7 +67,7 @@ export const Footer: React.FC = () => {
               <span className="font-headline-md text-xl text-primary font-bold">Bloom Cake &amp; Coffe</span>
             </div>
             <p className="font-body-md text-sm text-on-surface-variant leading-relaxed">
-              Thương hiệu bánh ngọt và coffe phong cách Gastro Pop độc đáo tại thành phố biển Đà Nẵng. Kết hợp nghệ thuật làm bánh Pháp truyền thống cùng năng lượng nhiệt đới tươi mới rực rỡ.
+              Thương hiệu bánh ngọt và coffe phong cách Gastro Pop độc đáo tại thành phố biển Nha Trang. Kết hợp nghệ thuật làm bánh Pháp truyền thống cùng năng lượng nhiệt đới tươi mới rực rỡ.
             </p>
             <div className="pt-2 space-y-2">
               <a
@@ -77,11 +78,11 @@ export const Footer: React.FC = () => {
                 <span>Hotline Đặt Bánh: 1900 8899</span>
               </a>
               <a
-                href="mailto:hello@bloomcakedanang.vn"
+                href="mailto:hello@bloomcakenhatrang.vn"
                 className="font-body-sm text-xs text-on-surface-variant flex items-center gap-2 hover:text-primary transition-colors"
               >
                 <span className="material-symbols-outlined text-[20px]">mail</span>
-                <span>hello@bloomcakedanang.vn</span>
+                <span>hello@bloomcakenhatrang.vn</span>
               </a>
             </div>
 
@@ -110,75 +111,16 @@ export const Footer: React.FC = () => {
           {/* 6 Branches Grid */}
           <div className="lg:col-span-8 space-y-4">
             <div className="flex items-center justify-between border-b border-outline-variant/30 pb-3">
-              <h3 className="font-headline-md text-lg text-on-surface font-bold">Hệ Thống 6 Cơ Sở Tại Đà Nẵng</h3>
-              <button
-                onClick={() => setCurrentScreen('branches')}
-                className="font-label-md text-xs bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-bold hover:opacity-90 transition-opacity cursor-pointer"
-              >
-                Mở cửa: 07:00 - 22:30
-              </button>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 pt-1">
-              <button
-                onClick={() => setCurrentScreen('branches')}
-                className="text-left p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group"
-              >
-                <div className="font-label-md text-xs text-primary font-bold mb-0.5 group-hover:underline">1. Flagship Bếp Nóng</div>
-                <div className="font-body-sm text-sm text-on-surface font-semibold">784 Hàm Nghi</div>
-                <div className="font-body-sm text-xs text-on-surface-variant">Q. Thanh Khê, Đà Nẵng</div>
-                <div className="mt-2 font-label-sm text-[11px] text-secondary font-bold">Trải nghiệm mẻ bánh tại lò</div>
-              </button>
-
-              <button
-                onClick={() => setCurrentScreen('branches')}
-                className="text-left p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group"
-              >
-                <div className="font-label-md text-xs text-primary font-bold mb-0.5 group-hover:underline">2. View Cầu Rồng</div>
-                <div className="font-body-sm text-sm text-on-surface font-semibold">242 Bạch Đằng</div>
-                <div className="font-body-sm text-xs text-on-surface-variant">Q. Hải Châu, Đà Nẵng</div>
-                <div className="mt-2 font-label-sm text-[11px] text-secondary font-bold">Ngắm sông Hàn &amp; Cầu Rồng</div>
-              </button>
-
-              <button
-                onClick={() => setCurrentScreen('branches')}
-                className="text-left p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group"
-              >
-                <div className="font-label-md text-xs text-primary font-bold mb-0.5 group-hover:underline">3. Beachway Mỹ Khê</div>
-                <div className="font-body-sm text-sm text-on-surface font-semibold">15 Võ Văn Kiệt</div>
-                <div className="font-body-sm text-xs text-on-surface-variant">Q. Sơn Trà, Đà Nẵng</div>
-                <div className="mt-2 font-label-sm text-[11px] text-secondary font-bold">Cửa ngõ ra bãi tắm Mỹ Khê</div>
-              </button>
-
-              <button
-                onClick={() => setCurrentScreen('branches')}
-                className="text-left p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group"
-              >
-                <div className="font-label-md text-xs text-primary font-bold mb-0.5 group-hover:underline">4. Ocean Breeze</div>
-                <div className="font-body-sm text-sm text-on-surface font-semibold">128 Võ Nguyên Giáp</div>
-                <div className="font-body-sm text-xs text-on-surface-variant">Q. Ngũ Hành Sơn, Đà Nẵng</div>
-                <div className="mt-2 font-label-sm text-[11px] text-secondary font-bold">Tầm nhìn trực diện biển xanh</div>
-              </button>
-
-              <button
-                onClick={() => setCurrentScreen('branches')}
-                className="text-left p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group"
-              >
-                <div className="font-label-md text-xs text-primary font-bold mb-0.5 group-hover:underline">5. Retro Vintage</div>
-                <div className="font-body-sm text-sm text-on-surface font-semibold">310 Phan Châu Trinh</div>
-                <div className="font-body-sm text-xs text-on-surface-variant">Q. Hải Châu, Đà Nẵng</div>
-                <div className="mt-2 font-label-sm text-[11px] text-secondary font-bold">Góc phố cổ kính an yên</div>
-              </button>
-
-              <button
-                onClick={() => setCurrentScreen('branches')}
-                className="text-left p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group"
-              >
-                <div className="font-label-md text-xs text-primary font-bold mb-0.5 group-hover:underline">6. Gastro Corner</div>
-                <div className="font-body-sm text-sm text-on-surface font-semibold">88 Nguyễn Văn Thoại</div>
-                <div className="font-body-sm text-xs text-on-surface-variant">Q. Ngũ Hành Sơn, Đà Nẵng</div>
-                <div className="mt-2 font-label-sm text-[11px] text-secondary font-bold">Góc phố ẩm thực sôi động</div>
-              </button>
+              <h3 className="font-headline-md text-lg text-on-surface font-bold">Hệ Thống 6 Cơ Sở Tại Nha Trang</h3>
+              {BRANCHES.map((branch) => (
+                <button key={branch.id} onClick={() => setCurrentScreen('branches')}
+                  className="text-left p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group">
+                  <div className="font-label-md text-xs text-primary font-bold mb-0.5 group-hover:underline">{branch.number}. {branch.districtName}</div>
+                  <div className="font-body-sm text-sm text-on-surface font-semibold">{branch.name}</div>
+                  <div className="font-body-sm text-xs text-on-surface-variant">Nha Trang, Khánh Hòa</div>
+                  <div className="mt-2 font-label-sm text-[11px] text-secondary font-bold">{branch.statusBadge}</div>
+                </button>
+              ))}
             </div>
           </div>
         </div>
@@ -186,7 +128,7 @@ export const Footer: React.FC = () => {
         {/* Bottom copyright & quick links */}
         <div className="mt-12 pt-6 border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <p className="font-body-sm text-xs text-on-surface-variant">
-            © 2024 Bloom Cake &amp; Coffe Đà Nẵng. All rights reserved. Tiệm bánh Gastro Pop độc quyền miền Trung.
+            © 2024 Bloom Cake &amp; Coffe Nha Trang. All rights reserved. Tiệm bánh Gastro Pop độc quyền miền Trung.
           </p>
           <div className="flex items-center gap-6 font-label-md text-xs text-on-surface-variant">
             <button

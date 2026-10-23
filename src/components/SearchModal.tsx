@@ -85,7 +85,7 @@ export const SearchModal: React.FC = () => {
                 Gợi ý tìm kiếm phổ biến
               </span>
               <div className="flex flex-wrap gap-2">
-                {['Croissant Lava', 'Matcha Uji', 'Cà phê muối', 'Bạch Đằng', 'Workshop Croissant', 'Hộp Quà 6 Vị'].map(
+                {['Croissant Lava', 'Matcha Uji', 'Cà phê muối', 'Trần Phú', 'Workshop Croissant', 'Hộp Quà 6 Vị'].map(
                   (tag) => (
                     <button
                       key={tag}
