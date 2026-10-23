@@ -38,11 +38,11 @@ import {
 } from 'lucide-react';
 
 const BRANCH_LIST = [
-  '15 Hàm Nghi, Q. Thanh Khê',
-  '45 Võ Văn Kiệt, Q. Sơn Trà',
-  '242 Bạch Đằng, Q. Hải Châu',
-  '88 Nguyễn Văn Thoại, Q. Ngũ Hành Sơn',
-  '120 Pasteur, Q. Hải Châu',
+  '12 Hàn Thuyên, Nha Trang',
+  '44-46 Lê Thánh Tôn, Nha Trang',
+  '20 Trần Phú, Nha Trang',
+  '108 Lê Hồng Phong, Nha Trang',
+  '53 Lê Thành Phương, Nha Trang',
   'Xưởng bánh trung tâm Bloom Bakery',
 ];
 
@@ -222,14 +222,14 @@ export const InventoryScreen: React.FC = () => {
         '5000',
         '1000',
         '15000',
-        '15 Hàm Nghi; 45 Võ Văn Kiệt',
+        '12 Hàn Thuyên; 44-46 Lê Thánh Tôn',
         'Lá trà đen ủ lên men vùng đồi Ceylon, hương hoa mật ong đặc trưng',
       ],
       [
         'BB-CUP-360',
         'Ly giấy Kraft Bloom 360ml',
         'raw_material',
-        'Bao Bì Xanh Đà Nẵng',
+        'Bao Bì Xanh Nha Trang',
         'packaging',
         'cái',
         'Size S (360ml)',
@@ -252,7 +252,7 @@ export const InventoryScreen: React.FC = () => {
         '6',
         '2',
         '12',
-        '15 Hàm Nghi; 242 Bạch Đằng',
+        '12 Hàn Thuyên; 20 Trần Phú',
         'Tay nén trợ lực lò xo phản hồi chuẩn áp lực 30 lbs',
       ],
     ];
@@ -371,7 +371,7 @@ export const InventoryScreen: React.FC = () => {
           const actualStock = Number(matches[8]) || 100;
           const lowStockThreshold = Number(matches[9]) || 50;
           const maxStockThreshold = Number(matches[10]) || 500;
-          const branchesStr = matches[11] || '15 Hàm Nghi, Q. Thanh Khê';
+          const branchesStr = matches[11] || '12 Hàn Thuyên, Nha Trang';
           const description = matches[12] || 'Hàng nhập khẩu quản lý kho';
 
           newItems.push({
@@ -748,10 +748,10 @@ export const InventoryScreen: React.FC = () => {
                 className="w-full px-2.5 py-1.5 border rounded-xl bg-stone-50 text-xs focus:outline-hidden focus:border-primary"
               >
                 <option value="all">Tất cả chi nhánh</option>
-                <option value="15 Hàm Nghi">15 Hàm Nghi (Thanh Khê)</option>
-                <option value="45 Võ Văn Kiệt">45 Võ Văn Kiệt (Sơn Trà)</option>
-                <option value="242 Bạch Đằng">242 Bạch Đằng (Hải Châu)</option>
-                <option value="88 Nguyễn Văn Thoại">88 Nguyễn Văn Thoại</option>
+                <option value="12 Hàn Thuyên">12 Hàn Thuyên (Hàn Thuyên)</option>
+                <option value="44-46 Lê Thánh Tôn">44-46 Lê Thánh Tôn (Nha Trang)</option>
+                <option value="20 Trần Phú">20 Trần Phú (Trần Phú)</option>
+                <option value="108 Lê Hồng Phong">108 Lê Hồng Phong</option>
                 <option value="Xưởng bánh">Xưởng bánh trung tâm</option>
               </select>
             </div>

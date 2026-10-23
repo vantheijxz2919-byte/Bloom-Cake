@@ -70,7 +70,7 @@ export const POSScreen: React.FC = () => {
   // Calculate totals
   const subTotal = posCart.reduce((sum, item) => sum + item.price * item.quantity, 0);
   let discount = 0;
-  if (posAppliedVoucher === 'DANANGSWEET' && subTotal >= 200000) discount = 30000;
+  if (posAppliedVoucher === 'NHATRANGSWEET' && subTotal >= 200000) discount = 30000;
   else if (posAppliedVoucher === 'MATCHAFRESH') discount = Math.round(subTotal * 0.15);
   else if (posAppliedVoucher === 'MERCH250' && subTotal >= 250000) discount = 35000;
 

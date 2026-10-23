@@ -24,7 +24,7 @@ export const VouchersScreen: React.FC = () => {
       discountType,
       discountValue,
       minOrderValue: minOrder,
-      applicableBranch: 'Toàn bộ chi nhánh Đà Nẵng',
+      applicableBranch: 'Toàn bộ chi nhánh Nha Trang',
       totalQuota: quota,
       expiresAt,
       status: 'active',

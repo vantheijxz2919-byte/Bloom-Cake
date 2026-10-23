@@ -689,7 +689,7 @@ export const MembersScreen: React.FC = () => {
                   <strong className="text-red-400 font-bold">{selectedMember.daysUntilReset} ngày</strong> nữa).
                 </p>
                 <p className="text-[11px] text-stone-300">
-                  Theo quy định chu kỳ 6 tháng, điểm sẽ tự động reset về 0. Hãy ghé các chi nhánh Bloom Cake &amp; Coffe hoặc đặt giao hàng online để đổi bánh tươi nóng hoặc ly giữ nhiệt nhé! Hotline hỗ trợ: 0236 388 7844.
+                  Theo quy định chu kỳ 6 tháng, điểm sẽ tự động reset về 0. Hãy ghé các chi nhánh Bloom Cake &amp; Coffe hoặc đặt giao hàng online để đổi bánh tươi nóng hoặc ly giữ nhiệt nhé! Hotline hỗ trợ: 1900 8899.
                 </p>
               </div>
 

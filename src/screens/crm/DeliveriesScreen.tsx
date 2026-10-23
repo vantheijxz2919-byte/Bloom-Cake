@@ -331,7 +331,7 @@ export const DeliveriesScreen: React.FC = () => {
                   {selectedDelivery.codStatus === 'settled_with_store' && (
                     <span className="px-3 py-1.5 rounded-lg bg-emerald-100 text-emerald-900 font-bold text-xs flex items-center gap-1.5">
                       <CheckCircle2 className="w-4 h-4 text-emerald-700" />
-                      Đã hoàn tất đối soát & nộp đủ vào két ca Hàm Nghi
+                      Đã hoàn tất đối soát & nộp đủ vào két ca Hàn Thuyên
                     </span>
                   )}
                 </div>
