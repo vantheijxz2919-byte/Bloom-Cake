@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
+import { NhaTrangMap } from '../components/NhaTrangMap';
 import { BRANCHES } from '../data/mockData';
 
 export const BranchesScreen: React.FC = () => {
@@ -10,19 +11,19 @@ export const BranchesScreen: React.FC = () => {
 
   const districtCounts = {
     all: BRANCHES.length,
-    'thanh-khe': BRANCHES.filter((b) => b.district === 'thanh-khe').length,
-    'hai-chau': BRANCHES.filter((b) => b.district === 'hai-chau').length,
-    'son-tra': BRANCHES.filter((b) => b.district === 'son-tra').length,
-    'ngu-hanh-son': BRANCHES.filter((b) => b.district === 'ngu-hanh-son').length,
+    'han-thuyen': BRANCHES.filter((b) => b.district === 'han-thuyen').length,
+    'tran-phu': BRANCHES.filter((b) => b.district === 'tran-phu').length,
+    'trung-tam': BRANCHES.filter((b) => b.district === 'trung-tam').length,
+    'le-hong-phong': BRANCHES.filter((b) => b.district === 'le-hong-phong').length,
   };
 
   const handleGpsFind = () => {
-    setGpsStatus('Đang quét vị trí GPS vệ tinh tại Đà Nẵng...');
+    setGpsStatus('Đang quét vị trí GPS vệ tinh tại Nha Trang...');
     setTimeout(() => {
-      setGpsStatus('Cơ sở gần bạn nhất: Cơ sở 2 - 242 Bạch Đằng (~450m)');
+      setGpsStatus('Cơ sở gần bạn nhất: Cơ sở 2 - 20 Trần Phú (~450m)');
       setActiveDistrict('all');
       setHighlightedBranchId('b2');
-      showToast('Đã tìm thấy: Cơ sở 242 Bạch Đằng gần bạn nhất (~450m)!', 'Định vị GPS', 'success');
+      showToast('Đã tìm thấy: Cơ sở 20 Trần Phú gần bạn nhất (~450m)!', 'Định vị GPS', 'success');
 
       const el = document.getElementById('branch-card-b2');
       if (el) {
@@ -44,7 +45,7 @@ export const BranchesScreen: React.FC = () => {
   };
 
   const handleOrderFromBranch = (branchName: string, districtName: string) => {
-    setSelectedBranch(`${branchName}, Q. ${districtName}`);
+    setSelectedBranch(`${branchName}, Khu vực ${districtName}`);
     setCurrentScreen('menu');
   };
 
@@ -65,16 +66,16 @@ export const BranchesScreen: React.FC = () => {
           <div className="flex flex-wrap items-center gap-2 mb-4">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-xs tracking-wider uppercase font-bold">
               <span className="material-symbols-outlined text-[14px] text-primary">location_on</span>
-              Mạng Lưới Đà Nẵng
+              Mạng Lưới Nha Trang
             </span>
             <span className="text-outline text-xs">•</span>
             <span className="font-label-sm text-xs text-on-surface-variant tracking-wider uppercase">
-              6 Cơ Sở Chính Thức
+              6 Địa Chỉ Tham Khảo
             </span>
             <span className="text-outline text-xs">•</span>
             <span className="inline-flex items-center gap-1 font-label-sm text-xs text-secondary font-bold">
               <span className="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-              Đang phục vụ đồng loạt
+              Khám phá địa điểm Nha Trang
             </span>
           </div>
 
@@ -86,10 +87,10 @@ export const BranchesScreen: React.FC = () => {
                 <span className="text-black font-script text-5xl lg:text-6xl font-normal block sm:inline">
                   Bloom Cake &amp; Coffe
                 </span>{' '}
-                <span className="font-display-custom font-bold">rực rỡ bên bờ vịnh Đà Nẵng</span>
+                <span className="font-display-custom font-bold">rực rỡ bên bờ vịnh Nha Trang</span>
               </h1>
               <p className="font-body-lg text-base text-on-surface-variant max-w-2xl leading-relaxed">
-                Từ xưởng bánh trung tâm thơm phức mẻ nướng đầu ngày đến góc ban công ngắm Rồng phun lửa và đại lộ biển Mỹ Khê lộng gió. Mỗi cơ sở là một phong vị Gastro Pop riêng biệt đón chào bạn.
+                Từ xưởng bánh trung tâm thơm phức mẻ nướng đầu ngày đến góc phố Hàn Thuyên và đại lộ biển Nha Trang lộng gió. Các địa chỉ thực tế được dùng để minh họa hệ thống Bloom; chưa xác nhận đây là cửa hàng Bloom đang hoạt động. Vui lòng liên hệ trước khi ghé.
               </p>
             </div>
 
@@ -164,44 +165,44 @@ export const BranchesScreen: React.FC = () => {
                 Tất cả <span className="ml-1 opacity-80">({districtCounts.all})</span>
               </button>
               <button
-                onClick={() => setActiveDistrict('thanh-khe')}
+                onClick={() => setActiveDistrict('han-thuyen')}
                 className={`px-4 py-2.5 rounded-full font-label-md text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
-                  activeDistrict === 'thanh-khe'
+                  activeDistrict === 'han-thuyen'
                     ? 'bg-primary text-on-primary shadow-md'
                     : 'text-on-surface-variant hover:text-on-surface bg-surface-container hover:bg-surface-container-high'
                 }`}
               >
-                Thanh Khê <span className="ml-1 opacity-60">({districtCounts['thanh-khe']})</span>
+                Hàn Thuyên <span className="ml-1 opacity-60">({districtCounts['han-thuyen']})</span>
               </button>
               <button
-                onClick={() => setActiveDistrict('hai-chau')}
+                onClick={() => setActiveDistrict('tran-phu')}
                 className={`px-4 py-2.5 rounded-full font-label-md text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
-                  activeDistrict === 'hai-chau'
+                  activeDistrict === 'tran-phu'
                     ? 'bg-primary text-on-primary shadow-md'
                     : 'text-on-surface-variant hover:text-on-surface bg-surface-container hover:bg-surface-container-high'
                 }`}
               >
-                Hải Châu <span className="ml-1 opacity-60">({districtCounts['hai-chau']})</span>
+                Trần Phú <span className="ml-1 opacity-60">({districtCounts['tran-phu']})</span>
               </button>
               <button
-                onClick={() => setActiveDistrict('son-tra')}
+                onClick={() => setActiveDistrict('trung-tam')}
                 className={`px-4 py-2.5 rounded-full font-label-md text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
-                  activeDistrict === 'son-tra'
+                  activeDistrict === 'trung-tam'
                     ? 'bg-primary text-on-primary shadow-md'
                     : 'text-on-surface-variant hover:text-on-surface bg-surface-container hover:bg-surface-container-high'
                 }`}
               >
-                Sơn Trà <span className="ml-1 opacity-60">({districtCounts['son-tra']})</span>
+                Trung tâm <span className="ml-1 opacity-60">({districtCounts['trung-tam']})</span>
               </button>
               <button
-                onClick={() => setActiveDistrict('ngu-hanh-son')}
+                onClick={() => setActiveDistrict('le-hong-phong')}
                 className={`px-4 py-2.5 rounded-full font-label-md text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
-                  activeDistrict === 'ngu-hanh-son'
+                  activeDistrict === 'le-hong-phong'
                     ? 'bg-primary text-on-primary shadow-md'
                     : 'text-on-surface-variant hover:text-on-surface bg-surface-container hover:bg-surface-container-high'
                 }`}
               >
-                Ngũ Hành Sơn <span className="ml-1 opacity-60">({districtCounts['ngu-hanh-son']})</span>
+                Lê Hồng Phong <span className="ml-1 opacity-60">({districtCounts['le-hong-phong']})</span>
               </button>
             </div>
 
@@ -335,10 +336,10 @@ export const BranchesScreen: React.FC = () => {
                   </div>
                   <h3 className="font-headline-lg text-2xl lg:text-3xl text-on-surface font-bold">
                     Toàn Cảnh Hệ Thống Phục Vụ{' '}
-                    <span className="text-black font-script text-3xl font-normal">Tại Đà Nẵng</span>
+                    <span className="text-black font-script text-3xl font-normal">Tại Nha Trang</span>
                   </h3>
                   <p className="font-body-md text-sm text-on-surface-variant mt-2 leading-relaxed">
-                    Mạng lưới 6 cửa hàng được phân bổ chiến lược xuyên suốt trục Sông Hàn, Trung tâm Hành chính và Bờ biển Mỹ Khê. Chúng tôi đảm bảo thời gian giao bánh trung bình chỉ từ 20 đến 35 phút.
+                    Mạng lưới 6 cửa hàng được phân bổ chiến lược xuyên suốt trục biển Trần Phú, khu phố trung tâm và Bờ biển Nha Trang. Chúng tôi đảm bảo thời gian giao bánh trung bình chỉ từ 20 đến 35 phút.
                   </p>
                 </div>
 
@@ -381,12 +382,7 @@ export const BranchesScreen: React.FC = () => {
               {/* Static Map Visual */}
               <div className="lg:col-span-7">
                 <div className="relative w-full h-[420px] rounded-3xl overflow-hidden shadow-md border border-outline-variant/30">
-                  <div
-                    className="w-full h-full bg-cover bg-center"
-                    style={{
-                      backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSjt3_TM1O_s5_TUWlaphm11gP9Ih9U4Zjbsi3j5m0keQQsN18MwIld4WJ8aqr7kvdHluBg-4ZME_v4GQoIEeO6IPZTXleih-LPq2jY5edlK5efZVoJRozgnySqXO73jo2pQx7u82Cyp4CxhgY1zwS8yCKed5wuQ839tH32YAQ_kui1ljt8Su6-mFdzg0Q2m5qwb_Bf6kQ7cKLb2722AJMK0tlPLSO6FyJ-QCMNVPXIX4xxehktD8')`,
-                    }}
-                  />
+                  <NhaTrangMap className="w-full h-full" address={BRANCHES.find((branch) => branch.id === highlightedBranchId)?.address} />
                   <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-xs p-4 rounded-2xl bg-surface-container-lowest/95 backdrop-blur-md shadow-lg flex items-center gap-3 border border-outline-variant/20">
                     <div className="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center flex-shrink-0">
                       <span className="material-symbols-outlined text-[20px]">moped</span>
@@ -414,7 +410,7 @@ export const BranchesScreen: React.FC = () => {
                   Giờ Mở Cửa &amp; Mẻ Nóng
                 </h4>
                 <p className="font-body-sm text-xs text-on-surface-variant leading-relaxed">
-                  Tất cả chi nhánh bắt đầu phục vụ từ 06:30 hoặc 07:00 sáng. Riêng cơ sở Hàm Nghi nướng bánh xuyên suốt và Nguyễn Văn Thoại mở đón khách đến 23:30 đêm.
+                  Tất cả chi nhánh bắt đầu phục vụ từ 06:30 hoặc 07:00 sáng. Riêng cơ sở Hàn Thuyên nướng bánh xuyên suốt và Lê Hồng Phong mở đón khách đến 23:30 đêm.
                 </p>
               </div>
               <button
@@ -434,7 +430,7 @@ export const BranchesScreen: React.FC = () => {
                   Đặt Bàn &amp; Tiệc Nhỏ
                 </h4>
                 <p className="font-body-sm text-xs text-on-surface-variant leading-relaxed">
-                  Nhận giữ chỗ trước bàn view Cầu Rồng (Bạch Đằng) và bàn tiệc sinh nhật ngoài trời (Võ Nguyên Giáp). Vui lòng liên hệ hotline chi nhánh trước 2 tiếng.
+                  Nhận giữ chỗ trước bàn view vịnh Nha Trang (Trần Phú) và bàn tiệc sinh nhật ngoài trời (Trần Phú). Vui lòng liên hệ hotline chi nhánh trước 2 tiếng.
                 </p>
               </div>
               <a

@@ -10,7 +10,7 @@ export const SouvenirWorkshopScreen: React.FC = () => {
   const [studentName, setStudentName] = useState('Nguyễn Hoàng Lan');
   const [guestCount, setGuestCount] = useState<number>(1);
   const [phone, setPhone] = useState('0905 xxx xxx');
-  const [email, setEmail] = useState('danang.traveler@gmail.com');
+  const [email, setEmail] = useState('nhatrang.traveler@gmail.com');
   const [isBooked, setIsBooked] = useState(false);
 
   const handleSelectWorkshop = (title: string) => {
@@ -43,7 +43,7 @@ export const SouvenirWorkshopScreen: React.FC = () => {
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface shadow-sm text-primary -rotate-1 border border-outline-variant/30">
               <span className="material-symbols-outlined text-[18px]">qr_code_2</span>
               <span className="font-label-sm text-xs uppercase tracking-widest font-bold">
-                Danang Coastal Gastro Studio
+                Nha Trang Coastal Gastro Studio
               </span>
             </div>
             <h1 className="font-headline-lg text-4xl lg:text-5xl text-on-surface tracking-tight leading-tight">
@@ -57,7 +57,7 @@ export const SouvenirWorkshopScreen: React.FC = () => {
               <span className="font-script text-black text-2xl mr-1 font-normal inline-block">
                 Chạm vào
               </span>
-              nghệ thuật nhào bột bơ Pháp thủ công, đánh thức hương vị trà đạo Kyoto và mang về những món quà mang đậm hơi thở đại dương Đà Nẵng.
+              nghệ thuật nhào bột bơ Pháp thủ công, đánh thức hương vị trà đạo Kyoto và mang về những món quà mang đậm hơi thở đại dương Nha Trang.
             </p>
           </div>
 
@@ -94,7 +94,7 @@ export const SouvenirWorkshopScreen: React.FC = () => {
             </h2>
             <p className="font-body-md text-sm text-on-surface-variant max-w-xl">
               Trải nghiệm văn hóa làm bánh bơ Pháp tinh tế và trà đạo Uji thượng hạng. Giới hạn chỉ đúng{' '}
-              <strong className="text-on-surface font-semibold">8 học viên/buổi</strong> tại Studio 784 Hàm Nghi để bảo đảm chất lượng kèm 1:1 cùng Bếp trưởng.
+              <strong className="text-on-surface font-semibold">8 học viên/buổi</strong> tại Studio 12 Hàn Thuyên để bảo đảm chất lượng kèm 1:1 cùng Bếp trưởng.
             </p>
           </div>
 
@@ -194,7 +194,7 @@ export const SouvenirWorkshopScreen: React.FC = () => {
                     Ca Sáng (09:00 - 12:00) | Ca Chiều (14:30 - 17:30)
                   </p>
                   <p className="font-body-sm text-xs text-on-surface-variant">
-                    Thứ Bảy &amp; Chủ Nhật hàng tuần tại Studio Bếp Mở Hàm Nghi
+                    Thứ Bảy &amp; Chủ Nhật hàng tuần tại Studio Bếp Mở Hàn Thuyên
                   </p>
                 </div>
               </div>
@@ -205,7 +205,7 @@ export const SouvenirWorkshopScreen: React.FC = () => {
                 <div>
                   <p className="font-label-md text-xs text-on-surface font-bold">Bloom Studio Lầu 2</p>
                   <p className="font-body-sm text-xs text-on-surface-variant">
-                    784 Hàm Nghi, P. Tam Thuận, Q. Thanh Khê, Đà Nẵng
+                    12 Hàn Thuyên, Nha Trang, Khánh Hòa
                   </p>
                 </div>
               </div>
@@ -309,7 +309,7 @@ export const SouvenirWorkshopScreen: React.FC = () => {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="danang.traveler@gmail.com"
+                    placeholder="nhatrang.traveler@gmail.com"
                     className="w-full px-4 py-2.5 rounded-full bg-surface-container-low text-on-surface font-body-sm text-xs placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary border border-outline-variant/30"
                     required
                   />
@@ -341,7 +341,7 @@ export const SouvenirWorkshopScreen: React.FC = () => {
             <div className="space-y-2 max-w-2xl">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-xs uppercase font-bold tracking-wider">
                 <span className="material-symbols-outlined text-[16px]">redeem</span>
-                <span>Danang Limited Edition Collection</span>
+                <span>Nha Trang Limited Edition Collection</span>
               </div>
               <h2 className="font-headline-lg text-3xl lg:text-4xl text-on-surface font-bold">
                 Boutique Quà Lưu Niệm{' '}
@@ -350,7 +350,7 @@ export const SouvenirWorkshopScreen: React.FC = () => {
                 </span>
               </h2>
               <p className="font-body-md text-sm text-on-surface-variant leading-relaxed">
-                Gói trọn nắng vàng, vị mặn mòi gió biển Sơn Trà và sự ngọt ngào của cốt bơ Pháp vào những hộp quà tinh tế được đóng gói thủ công chuẩn thẩm mỹ Gastro Pop.
+                Gói trọn nắng vàng, vị mặn mòi gió biển Nha Trang và sự ngọt ngào của cốt bơ Pháp vào những hộp quà tinh tế được đóng gói thủ công chuẩn thẩm mỹ Gastro Pop.
               </p>
             </div>
 
@@ -362,7 +362,7 @@ export const SouvenirWorkshopScreen: React.FC = () => {
               <div>
                 <p className="font-label-md text-xs font-bold text-on-surface">Giao Quà Tận Nơi Trong 45 Phút</p>
                 <p className="font-body-sm text-[11px] text-on-surface-variant">
-                  Đến sảnh Khách Sạn / Resort / Ga Sân Bay Đà Nẵng
+                  Đến sảnh Khách Sạn / Resort / Khách Sạn Nha Trang
                 </p>
               </div>
             </div>
@@ -454,7 +454,7 @@ export const SouvenirWorkshopScreen: React.FC = () => {
                 ))}
               </div>
               <p className="font-body-sm text-xs text-on-surface leading-relaxed italic">
-                "Cả nhà mình đi du lịch Đà Nẵng, tham gia lớp Croissant sáng thứ 7. Bé nhà mình thích mê vì được nhào bột thật. Lúc về tiệm còn ship 3 hộp thiếc ra sảnh Furama đúng 40 phút!"
+                "Cả nhà mình đi du lịch Nha Trang, tham gia lớp Croissant sáng thứ 7. Bé nhà mình thích mê vì được nhào bột thật. Lúc về tiệm còn ship 3 hộp thiếc ra sảnh InterContinental Nha Trang đúng 40 phút!"
               </p>
             </div>
             <div className="flex items-center gap-3 pt-2 border-t border-surface-container">
@@ -520,7 +520,7 @@ export const SouvenirWorkshopScreen: React.FC = () => {
                 ))}
               </div>
               <p className="font-body-sm text-xs text-on-surface leading-relaxed italic">
-                "Une merveilleuse surprise au cœur de Da Nang ! La qualité du beurre feuilleté est exceptionnelle, digne des bonnes boulangeries parisiennes."
+                "Une merveilleuse surprise au cœur de Nha Trang ! La qualité du beurre feuilleté est exceptionnelle, digne des bonnes boulangeries parisiennes."
               </p>
             </div>
             <div className="flex items-center gap-3 pt-2 border-t border-surface-container">
@@ -553,7 +553,7 @@ export const SouvenirWorkshopScreen: React.FC = () => {
             </span>
             <h3 className="font-headline-md text-xl text-on-surface font-bold">Ghé Thăm Studio Trực Tiếp</h3>
             <p className="font-body-sm text-xs text-on-surface-variant leading-relaxed">
-              Nằm ngay trung tâm thành phố, Studio Hàm Nghi sở hữu hệ thống bếp mở vô trùng đạt chuẩn quốc tế, khu vực thưởng trà ngoài trời ngập tràn hoa lá và quầy lưu niệm trưng bày đầy đủ mẫu hộp giới hạn.
+              Nằm ngay trung tâm thành phố, Studio Hàn Thuyên sở hữu hệ thống bếp mở vô trùng đạt chuẩn quốc tế, khu vực thưởng trà ngoài trời ngập tràn hoa lá và quầy lưu niệm trưng bày đầy đủ mẫu hộp giới hạn.
             </p>
             <div className="pt-2 flex flex-wrap gap-4">
               <div className="flex items-center gap-2 font-label-md text-xs text-on-surface">

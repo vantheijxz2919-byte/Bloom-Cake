@@ -168,7 +168,7 @@ export const CRMProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [activeCrmTab, setActiveCrmTab] = useState<CRMTab>('pos');
   const [allStaffUsers] = useState<StaffUser[]>(INITIAL_STAFF_USERS);
   const [activeStaff, setActiveStaff] = useState<StaffUser>(INITIAL_STAFF_USERS[0]); // Default: Cashier Trịnh Thu Hà
-  const [activeBranch, setActiveBranch] = useState<string>('15 Hàm Nghi, Q. Thanh Khê');
+  const [activeBranch, setActiveBranch] = useState<string>('12 Hàn Thuyên, Nha Trang');
 
   // Operations Data
   const [activeShift, setActiveShift] = useState<CashShift>(INITIAL_CASH_SHIFT);
@@ -1003,7 +1003,7 @@ export const CRMProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       return { success: false, message: 'Không tìm thấy thông tin hội viên.', smsContent: '' };
     }
 
-    const smsText = `[BLOOM CAFE] Chào ${member.name}, bạn đang có ${member.availablePoints} điểm Bloom Club sắp hết hạn vào ngày ${member.cycleResetDate} (còn ${member.daysUntilReset} ngày). Hãy ghé Bloom Cake & Coffe đổi quà bánh ngọt hoặc đồ lưu niệm trước khi điểm reset về 0 nhé! Hotline hỗ trợ: 0236 388 7844.`;
+    const smsText = `[BLOOM CAFE] Chào ${member.name}, bạn đang có ${member.availablePoints} điểm Bloom Club sắp hết hạn vào ngày ${member.cycleResetDate} (còn ${member.daysUntilReset} ngày). Hãy ghé Bloom Cake & Coffe đổi quà bánh ngọt hoặc đồ lưu niệm trước khi điểm reset về 0 nhé! Hotline hỗ trợ: 1900 8899.`;
     const sendTime =
       new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' }) +
       ' ' +
@@ -1285,7 +1285,7 @@ export const CRMProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
     const subTotal = posCart.reduce((s, i) => s + i.price * i.quantity, 0);
     let discount = 0;
-    if (posAppliedVoucher === 'DANANGSWEET' && subTotal >= 200000) discount = 30000;
+    if (posAppliedVoucher === 'NHATRANGSWEET' && subTotal >= 200000) discount = 30000;
     else if (posAppliedVoucher === 'MATCHAFRESH') discount = Math.round(subTotal * 0.15);
 
     const shippingFee = posOrderType === 'delivery' ? 18000 : 0;

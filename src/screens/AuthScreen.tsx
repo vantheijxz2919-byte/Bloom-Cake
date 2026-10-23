@@ -121,7 +121,7 @@ export const AuthScreen: React.FC = () => {
                   alt="Bloom Logo"
                   className="w-5 h-5 rounded-full object-cover ring-1 ring-white/50"
                 />
-                <span>Đà Nẵng Artisan Bakery • Bloom Club</span>
+                <span>Nha Trang Artisan Bakery • Bloom Club</span>
               </div>
 
               {/* Title & Pitch */}
@@ -131,11 +131,11 @@ export const AuthScreen: React.FC = () => {
                     Gia Nhập Bloom Club
                   </span>
                   <span className="font-script text-4xl lg:text-5xl text-black font-normal block leading-none py-1">
-                    Trọn Vị Ngọt Ngào Bên Biển Đà Nẵng
+                    Trọn Vị Ngọt Ngào Bên Biển Nha Trang
                   </span>
                 </h1>
                 <p className="font-body-md text-on-surface-variant text-xs sm:text-sm mt-2.5 leading-relaxed">
-                  Cộng đồng dành riêng cho tín đồ say mê cốt bánh bơ Pháp giòn xốp và Uji Matcha Kyoto thượng hạng tại 6 chi nhánh Đà Nẵng.
+                  Cộng đồng dành riêng cho tín đồ say mê cốt bánh bơ Pháp giòn xốp và Uji Matcha Kyoto thượng hạng tại 6 chi nhánh Nha Trang.
                 </p>
               </div>
 
@@ -207,7 +207,7 @@ export const AuthScreen: React.FC = () => {
                         Đồng bộ 6 chi nhánh &amp; Giao hỏa tốc
                       </p>
                       <p className="font-body-sm text-[11px] text-on-surface-variant leading-tight">
-                        Giao giỏ bánh nóng tới tận khách sạn &amp; resort Đà Nẵng
+                        Giao giỏ bánh nóng tới tận khách sạn &amp; resort Nha Trang
                       </p>
                     </div>
                   </div>
@@ -218,9 +218,9 @@ export const AuthScreen: React.FC = () => {
             <div className="relative z-10 pt-5 mt-5 border-t border-outline-variant/30 flex items-center justify-between text-xs text-on-surface-variant">
               <span className="inline-flex items-center gap-1.5 font-medium">
                 <span className="material-symbols-outlined text-primary text-base">pin_drop</span>
-                Hải Châu • Sơn Trà • Ngũ Hành Sơn
+                Hàn Thuyên • Trần Phú • Lê Hồng Phong
               </span>
-              <span className="font-semibold text-primary">#BloomBakeryDaNang</span>
+              <span className="font-semibold text-primary">#BloomBakeryNhaTrang</span>
             </div>
           </section>
 
@@ -443,7 +443,7 @@ export const AuthScreen: React.FC = () => {
                       required
                     />
                     <label htmlFor="terms" className="font-body-sm text-xs text-on-surface-variant cursor-pointer leading-relaxed">
-                      Tôi đồng ý với điều khoản thành viên và chấp thuận đồng bộ điểm tích lũy tại toàn bộ 6 chi nhánh Đà Nẵng.
+                      Tôi đồng ý với điều khoản thành viên và chấp thuận đồng bộ điểm tích lũy tại toàn bộ 6 chi nhánh Nha Trang.
                     </label>
                   </div>
 

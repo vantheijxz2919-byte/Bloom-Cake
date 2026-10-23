@@ -43,7 +43,7 @@ export interface Branch {
   id: string;
   number: number;
   name: string;
-  district: 'thanh-khe' | 'hai-chau' | 'son-tra' | 'ngu-hanh-son';
+  district: 'han-thuyen' | 'tran-phu' | 'trung-tam' | 'le-hong-phong';
   districtName: string;
   address: string;
   hours: string;

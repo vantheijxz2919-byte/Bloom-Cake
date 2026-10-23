@@ -27,7 +27,7 @@ export const LoyaltyScreen: React.FC = () => {
       daysUntilReset: 6,
       smsNoticeSent: true,
       smsNoticeDate: '22/10/2026 09:00',
-      lastSmsMessage: `[BLOOM CAFE] Chào Hồng Anh, bạn đang có 2.450 điểm Bloom Club sắp hết hạn vào ngày 29/10/2026 (còn 6 ngày). Hãy ghé Bloom Cake & Coffe đổi quà bánh ngọt trước khi điểm reset về 0 nhé! Hotline: 0236 388 7844.`,
+      lastSmsMessage: `[BLOOM CAFE] Chào Hồng Anh, bạn đang có 2.450 điểm Bloom Club sắp hết hạn vào ngày 29/10/2026 (còn 6 ngày). Hãy ghé Bloom Cake & Coffe đổi quà bánh ngọt trước khi điểm reset về 0 nhé! Hotline: 1900 8899.`,
     });
 
     showToast('Đã cập nhật số dư điểm & quyền lợi thành viên của bạn!', 'Tra cứu thành công', 'success');
@@ -85,7 +85,7 @@ export const LoyaltyScreen: React.FC = () => {
             </h1>
             <p className="font-body-lg text-base text-on-surface-variant max-w-xl leading-relaxed">
               Tham gia cộng đồng người yêu bánh ngọt &amp; cafe ven biển miền Trung. Tích lũy{' '}
-              <span className="font-bold text-primary">5% - 10%</span> giá trị mọi hóa đơn tại trọn bộ 6 chi nhánh Đà Nẵng và hệ thống đặt hỏa tốc trực tuyến.
+              <span className="font-bold text-primary">5% - 10%</span> giá trị mọi hóa đơn tại trọn bộ 6 chi nhánh Nha Trang và hệ thống đặt hỏa tốc trực tuyến.
             </p>
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <a
@@ -130,7 +130,7 @@ export const LoyaltyScreen: React.FC = () => {
                   />
                   <div>
                     <p className="font-headline-sm text-base leading-none font-bold">Bloom Pass</p>
-                    <p className="font-label-sm text-[10px] opacity-80 mt-1">Đà Nẵng Coastal Bakery</p>
+                    <p className="font-label-sm text-[10px] opacity-80 mt-1">Nha Trang Coastal Bakery</p>
                   </div>
                 </div>
                 <span className="px-2.5 py-1 rounded-full bg-white/20 text-white font-label-sm text-[10px] backdrop-blur-md uppercase font-bold tracking-wide">
@@ -222,7 +222,7 @@ export const LoyaltyScreen: React.FC = () => {
                         </span>
                       </div>
                       <p className="font-body-sm text-xs text-on-surface-variant">
-                        SĐT: {memberData.phone} • Chi nhánh quen: 242 Bạch Đằng
+                        SĐT: {memberData.phone} • Chi nhánh quen: 20 Trần Phú
                       </p>
                     </div>
                   </div>
@@ -385,7 +385,7 @@ export const LoyaltyScreen: React.FC = () => {
             <span className="font-display-custom font-bold">Bloom Club</span>
           </h2>
           <p className="font-body-md text-sm text-on-surface-variant">
-            Mỗi lần thưởng thức croissant bơ Pháp hay ly cold brew kem cheese tại Đà Nẵng, bạn đều đang tích lũy những đặc quyền ẩm thực ngọt ngào.
+            Mỗi lần thưởng thức croissant bơ Pháp hay ly cold brew kem cheese tại Nha Trang, bạn đều đang tích lũy những đặc quyền ẩm thực ngọt ngào.
           </p>
         </div>
 
@@ -488,7 +488,7 @@ export const LoyaltyScreen: React.FC = () => {
                   <li className="flex items-start gap-2.5">
                     <span className="material-symbols-outlined text-secondary text-[20px] shrink-0">check_circle</span>
                     <span>
-                      Tặng <strong>Hộp bánh cookies souvenir Đà Nẵng</strong> vào tháng sinh nhật.
+                      Tặng <strong>Hộp bánh cookies souvenir Nha Trang</strong> vào tháng sinh nhật.
                     </span>
                   </li>
                   <li className="flex items-start gap-2.5">
@@ -541,7 +541,7 @@ export const LoyaltyScreen: React.FC = () => {
                   <li className="flex items-start gap-2.5">
                     <span className="material-symbols-outlined text-secondary text-[20px] shrink-0">check_circle</span>
                     <span>
-                      <strong>Freeship không giới hạn</strong> toàn TP. Đà Nẵng (áp dụng cả resort biển Sơn Trà / Non Nước).
+                      <strong>Freeship không giới hạn</strong> toàn TP. Nha Trang (áp dụng cả resort biển Nha Trang / Trần Phú).
                     </span>
                   </li>
                   <li className="flex items-start gap-2.5">
@@ -751,7 +751,7 @@ export const LoyaltyScreen: React.FC = () => {
               </div>
               <h3 className="font-headline-sm text-base text-on-surface font-bold">Đọc Số Điện Thoại</h3>
               <p className="font-body-sm text-xs text-on-surface-variant leading-relaxed">
-                Khi order tại 6 cửa hàng Đà Nẵng hoặc nhập số điện thoại tại cổng đặt giao online, điểm tự động cộng dồn sau 3 giây.
+                Khi order tại 6 cửa hàng Nha Trang hoặc nhập số điện thoại tại cổng đặt giao online, điểm tự động cộng dồn sau 3 giây.
               </p>
             </div>
             <div className="space-y-3 text-center md:text-left">
@@ -821,7 +821,7 @@ export const LoyaltyScreen: React.FC = () => {
               </div>
               <h3 className="font-headline-sm text-sm font-bold text-stone-900">Đổi Quà &amp; Trừ Tiền Thỏa Thích</h3>
               <p className="font-body-sm text-xs text-stone-600 leading-relaxed">
-                Trong 7 ngày này, bạn có thể dễ dàng đổi lấy bánh sừng bò giòn, ly giữ nhiệt Gastro Pop hoặc trừ tiền trực tiếp trên hóa đơn tại cả 6 chi nhánh Đà Nẵng.
+                Trong 7 ngày này, bạn có thể dễ dàng đổi lấy bánh sừng bò giòn, ly giữ nhiệt Gastro Pop hoặc trừ tiền trực tiếp trên hóa đơn tại cả 6 chi nhánh Nha Trang.
               </p>
             </div>
           </div>
@@ -852,7 +852,7 @@ export const LoyaltyScreen: React.FC = () => {
               },
               {
                 q: 'Tôi có thể dùng chung điểm tại 6 chi nhánh và đặt giao hàng online không?',
-                a: 'Có! Hệ thống Bloom Club đồng bộ thời gian thực trên toàn bộ 6 chi nhánh (Bạch Đằng, Hàm Nghi, Võ Văn Kiệt, Võ Nguyên Giáp, Phan Châu Trinh, Nguyễn Văn Thoại) và website đặt hàng. Bạn tích điểm ở tiệm này có thể đổi thưởng hoặc trừ tiền ở bất kỳ cơ sở nào.',
+                a: 'Có! Hệ thống Bloom Club đồng bộ thời gian thực trên toàn bộ 6 chi nhánh (Hàn Thuyên, 20 Trần Phú, Lê Thánh Tôn, 62 Trần Phú, Lê Thành Phương, Lê Hồng Phong) và website đặt hàng. Bạn tích điểm ở tiệm này có thể đổi thưởng hoặc trừ tiền ở bất kỳ cơ sở nào.',
               },
               {
                 q: 'Làm thế nào để nhận quà tặng sinh nhật (Bánh, nến pastel, hộp cookies)?',
@@ -938,7 +938,7 @@ export const LoyaltyScreen: React.FC = () => {
                   Theo quy định, điểm tích lũy sẽ reset về 0 sau 6 tháng. Hãy ghé 6 chi nhánh Bloom Cake &amp; Coffe hoặc đặt giao hàng online để đổi bánh croissant tươi nóng hoặc ly giữ nhiệt nhé!
                 </p>
                 <div className="text-[10px] text-stone-400 pt-1 border-t border-stone-700/60 flex items-center justify-between">
-                  <span>Hotline: 0236 388 7844</span>
+                  <span>Hotline: 1900 8899</span>
                   <span>Mã: SMC-REMIND</span>
                 </div>
               </div>

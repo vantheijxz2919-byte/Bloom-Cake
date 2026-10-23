@@ -45,7 +45,7 @@ export const MenuScreen: React.FC = () => {
   // Customer form details in sidebar
   const [customerName, setCustomerName] = useState('Nguyễn Phương Linh');
   const [customerPhone, setCustomerPhone] = useState('0918 452 889');
-  const [deliveryAddress, setDeliveryAddress] = useState('36 Lâm Hoành, P. Phước Mỹ, Q. Sơn Trà, TP. Đà Nẵng');
+  const [deliveryAddress, setDeliveryAddress] = useState('32-34 Trần Phú, Nha Trang, Khánh Hòa');
   const [customerNotes, setCustomerNotes] = useState('');
 
   const isDrinkItem = (item: MenuItem): boolean => {
@@ -141,7 +141,7 @@ export const MenuScreen: React.FC = () => {
             <span>•</span>
             <span>Matcha Uji Hái Tay Kyoto</span>
             <span>•</span>
-            <span>Giao nhanh 6 quận Đà Nẵng trong 30 phút</span>
+            <span>Giao nhanh nội thành Nha Trang trong 30 phút</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="material-symbols-outlined text-[16px]">call</span>
@@ -159,7 +159,7 @@ export const MenuScreen: React.FC = () => {
             <div className="lg:col-span-7 space-y-5">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary-fixed text-primary font-label-md text-xs font-bold shadow-sm">
                 <span className="material-symbols-outlined text-[16px]">auto_awesome</span>
-                <span>Bảng Thực Đơn Thủ Công Gốc • Đà Nẵng 2025</span>
+                <span>Bảng Thực Đơn Thủ Công Gốc • Nha Trang 2025</span>
               </div>
               <h1 className="font-headline-lg text-4xl lg:text-5xl text-on-surface tracking-tight leading-tight">
                 <span className="font-script text-5xl lg:text-6xl font-normal text-black inline-block mr-2">
@@ -185,7 +185,7 @@ export const MenuScreen: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest text-on-surface shadow-sm">
                   <span className="material-symbols-outlined text-tertiary text-[20px]">pin_drop</span>
-                  <span className="font-label-md text-xs font-bold">6 Cơ Sở Trung Tâm Đà Nẵng</span>
+                  <span className="font-label-md text-xs font-bold">6 Cơ Sở Trung Tâm Nha Trang</span>
                 </div>
               </div>
             </div>
@@ -273,7 +273,7 @@ export const MenuScreen: React.FC = () => {
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 pb-4 border-b border-surface-container">
             <div>
               <span className="font-label-sm text-[11px] uppercase tracking-wider text-primary font-bold">
-                Phương thức nhận hàng Bloom Cake &amp; Coffe Đà Nẵng
+                Phương thức nhận hàng Bloom Cake &amp; Coffe Nha Trang
               </span>
               <h2 className="font-headline-md text-xl sm:text-2xl text-on-surface font-bold mt-0.5">
                 Bạn Muốn Nhận Món Như Thế Nào Hôm Nay?
@@ -338,7 +338,7 @@ export const MenuScreen: React.FC = () => {
               <div className="flex items-center gap-2 text-primary">
                 <span className="material-symbols-outlined text-[20px]">local_shipping</span>
                 <span className="font-semibold">
-                  Giao nhanh 6 quận Đà Nẵng từ: <strong>{selectedBranch}</strong> • Đóng túi giữ nhiệt kép.
+                  Giao nhanh nội thành Nha Trang từ: <strong>{selectedBranch}</strong> • Đóng túi giữ nhiệt kép.
                 </span>
               </div>
               <div className="flex items-center gap-2 text-on-surface-variant">
@@ -605,8 +605,8 @@ export const MenuScreen: React.FC = () => {
                           className="w-full bg-surface-container-lowest text-on-surface font-body-sm text-xs rounded-xl px-3 py-2 border border-outline-variant/30 focus:outline-none focus:ring-1 focus:ring-primary"
                         >
                           {BRANCHES.map((b) => (
-                            <option key={b.id} value={`${b.name}, Q. ${b.districtName}`}>
-                              {b.number}. {b.name}, Q. {b.districtName} ({b.hours})
+                            <option key={b.id} value={`${b.name}, Khu vực ${b.districtName}`}>
+                              {b.number}. {b.name}, Khu vực {b.districtName} ({b.hours})
                             </option>
                           ))}
                         </select>
@@ -669,8 +669,8 @@ export const MenuScreen: React.FC = () => {
                           className="w-full bg-surface-container-lowest text-on-surface font-body-sm text-xs rounded-xl px-3 py-2 border border-outline-variant/30 focus:outline-none focus:ring-1 focus:ring-primary"
                         >
                           {BRANCHES.map((b) => (
-                            <option key={b.id} value={`${b.name}, Q. ${b.districtName}`}>
-                              {b.number}. {b.name}, Q. {b.districtName}
+                            <option key={b.id} value={`${b.name}, Khu vực ${b.districtName}`}>
+                              {b.number}. {b.name}, Khu vực {b.districtName}
                             </option>
                           ))}
                         </select>
@@ -678,13 +678,13 @@ export const MenuScreen: React.FC = () => {
 
                       <div>
                         <label className="font-label-sm text-[11px] text-tertiary uppercase tracking-wider block font-bold mb-1">
-                          Địa chỉ giao hàng tại Đà Nẵng:
+                          Địa chỉ giao hàng tại Nha Trang:
                         </label>
                         <input
                           type="text"
                           value={deliveryAddress}
                           onChange={(e) => setDeliveryAddress(e.target.value)}
-                          placeholder="Số nhà, đường, KS/resort, quận..."
+                          placeholder="Số nhà, đường, KS/resort tại Nha Trang..."
                           className="w-full bg-surface-container-lowest text-on-surface text-xs rounded-xl px-3 py-2 border border-outline-variant/30"
                         />
                       </div>

@@ -220,7 +220,7 @@ export interface InventoryItem {
   supplier: string;
   location: string;
   branchId: string;
-  applicableBranches?: string[]; // Các chi nhánh sử dụng (Hàm Nghi, Võ Văn Kiệt, Bạch Đằng...)
+  applicableBranches?: string[]; // Các chi nhánh sử dụng (Hàn Thuyên, Lê Thánh Tôn, Trần Phú...)
   expiryDate?: string;
   lotNumber?: string;
 }

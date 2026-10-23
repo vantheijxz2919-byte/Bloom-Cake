@@ -81,7 +81,7 @@ export const InvoicePrintModal: React.FC = () => {
                 BLOOM CAKE &amp; COFFE
               </h4>
               <p className="text-[11px] text-stone-600">{inv.branchName}</p>
-              <p className="text-[10px] text-stone-500">Hotline: 0236 388 9999 • Hotline góp ý: 1900 8888</p>
+              <p className="text-[10px] text-stone-500">Hotline: 1900 8899 • Hotline góp ý: 1900 8888</p>
               <div className="mt-2 text-[11px] flex justify-between text-stone-600">
                 <span>Số: <strong>{inv.id}</strong></span>
                 <span>Ca: {inv.cashShiftId.slice(-6)}</span>
