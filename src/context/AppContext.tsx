@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { ScreenName, CartItem, OrderDetails } from '../types';
 import { useCRM } from './CRMContext';
+import { BRANCHES } from '../data/mockData';
 
 interface ToastMessage {
   id: string;
@@ -100,7 +101,7 @@ const INITIAL_CART: CartItem[] = [
   {
     id: 'cart-4',
     menuItemId: 'm9',
-    name: 'Cà phê muối Đà Nẵng',
+    name: 'Cà phê muối Nha Trang',
     price: 39000,
     quantity: 1,
     selectedOption: 'Kem muối béo mặn',
@@ -122,8 +123,8 @@ const INITIAL_ORDER: OrderDetails = {
   total: 239000,
   orderMethod: 'delivery',
   pickupTime: '11:15',
-  branchName: 'CN 45 Võ Văn Kiệt, Q. Sơn Trà',
-  deliveryAddress: 'Khách sạn Sala Danang Beach, 36 Lâm Hoành, Phước Mỹ, Sơn Trà, Đà Nẵng',
+  branchName: 'CN 44-46 Lê Thánh Tôn, Nha Trang',
+  deliveryAddress: 'InterContinental Nha Trang, 32-34 Trần Phú, Nha Trang, Khánh Hòa',
   receiverName: 'Nguyễn Phương Linh',
   receiverPhone: '0918.452.xxx',
   customerNotes: 'Giao tại quầy lễ tân giúp mình nhé',
@@ -137,8 +138,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const { addNewOrderTickets, addAuditLog } = useCRM();
   const [currentScreen, setCurrentScreen] = useState<ScreenName>('home');
   const [cart, setCart] = useState<CartItem[]>(INITIAL_CART);
-  const [appliedVoucher, setAppliedVoucher] = useState<string | null>('DANANGSWEET');
-  const [selectedBranch, setSelectedBranch] = useState<string>('15 Võ Văn Kiệt, Q. Sơn Trà');
+  const [appliedVoucher, setAppliedVoucher] = useState<string | null>('NHATRANGSWEET');
+  const [selectedBranch, setSelectedBranch] = useState<string>(`${BRANCHES[2].name}, Khu vực ${BRANCHES[2].districtName}`);
   const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
   const [toasts, setToasts] = useState<ToastMessage[]>([]);
@@ -168,7 +169,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   // Pick-up (tới lấy) is always free shipping (0 đ); delivery is 15.000 đ or free > 250k
   const shippingFee = orderMethod === 'pickup' ? 0 : (subTotal > 250000 || appliedVoucher === 'SUMMERFREE' ? 0 : 15000);
   let discount = 0;
-  if (appliedVoucher === 'DANANGSWEET' && subTotal >= 200000) {
+  if (appliedVoucher === 'NHATRANGSWEET' && subTotal >= 200000) {
     discount = 30000;
   } else if (appliedVoucher === 'MATCHAFRESH') {
     discount = Math.round(subTotal * 0.15);
@@ -253,7 +254,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   const applyVoucher = (code: string) => {
     const cleanCode = code.trim().toUpperCase();
-    if (['SUMMERFREE', 'DANANGSWEET', 'MATCHAFRESH'].includes(cleanCode)) {
+    if (['SUMMERFREE', 'NHATRANGSWEET', 'MATCHAFRESH'].includes(cleanCode)) {
       setAppliedVoucher(cleanCode);
       showToast(`Áp dụng mã ưu đãi ${cleanCode} thành công!`, 'Ưu đãi hợp lệ', 'success');
       return true;
@@ -297,12 +298,12 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       branchName: finalBranch,
       deliveryAddress: isPickup
         ? `Tự đến lấy tại quầy: ${finalBranch}`
-        : (customerData?.address || 'Khách sạn Sala Danang Beach, 36 Lâm Hoành, Phước Mỹ, Sơn Trà'),
+        : (customerData?.address || 'InterContinental Nha Trang, 32-34 Trần Phú, Nha Trang, Khánh Hòa'),
       receiverName: customerData?.name || 'Nguyễn Phương Linh',
       receiverPhone: customerData?.phone || '0918.452.xxx',
       customerNotes: customerData?.notes || '',
       shipperName: isPickup ? 'Nhân viên quầy Bloom' : 'Nguyễn Văn Hưng',
-      shipperPhone: isPickup ? '0236 388 7844' : '0905 789 123',
+      shipperPhone: isPickup ? '1900 8899' : '0905 789 123',
       shipperPlate: isPickup ? 'Tại Quầy Thu Ngân' : '43-D1 829.14',
       estimatedDeliveryTime: isPickup ? (customerData?.pickupTime || '10-15 phút nữa') : '30 phút nữa',
     };
