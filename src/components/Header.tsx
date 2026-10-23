@@ -34,9 +34,9 @@ export const Header: React.FC = () => {
             <span className="opacity-60">•</span>
             <span className="font-semibold">TƯƠI MỖI BÌNH MINH</span>
             <span className="opacity-60">•</span>
-            <span className="font-semibold">GIAO HỎA TỐC 30 PHÚT TẠI ĐÀ NẴNG</span>
+            <span className="font-semibold">GIAO HỎA TỐC 30 PHÚT TẠI NHA TRANG</span>
             <span className="opacity-60 hidden md:inline">•</span>
-            <span className="font-semibold hidden md:inline">HỆ THỐNG 6 CƠ SỞ ĐÀ NẴNG</span>
+            <span className="font-semibold hidden md:inline">HỆ THỐNG 6 CƠ SỞ NHA TRANG</span>
             <span className="opacity-60">•</span>
             <a
               href="tel:19008899"
