@@ -20,8 +20,8 @@ export const OrderTrackingScreen: React.FC = () => {
     orderMethod: 'delivery',
     pickupTime: '11:15',
     customerNotes: 'Giao tại quầy lễ tân',
-    branchName: 'CN 45 Võ Văn Kiệt',
-    deliveryAddress: 'Khách sạn Sala Danang Beach, 36 Lâm Hoành, Phước Mỹ, Sơn Trà, Đà Nẵng',
+    branchName: 'CN 44-46 Lê Thánh Tôn',
+    deliveryAddress: 'InterContinental Nha Trang, 32-34 Trần Phú, Nha Trang, Khánh Hòa',
     receiverName: 'Nguyễn Phương Linh',
     receiverPhone: '0918.452.xxx',
     shipperName: 'Nguyễn Văn Hưng',
@@ -86,7 +86,7 @@ export const OrderTrackingScreen: React.FC = () => {
                   <p className="font-body-md text-xs sm:text-sm text-on-surface-variant max-w-xl leading-relaxed">
                     {isPickup
                       ? `Đơn hàng của bạn đang được pha chế & nướng mẻ mới tại ${order.branchName}. Quý khách vui lòng ghé quầy thu ngân đọc mã đơn hoặc số điện thoại để nhận ngay nhé!`
-                      : 'Cảm ơn bạn đã lựa chọn bánh ngọt thủ công & trà thanh mát từ Bloom Cake & Coffe Đà Nẵng. Mọi mẻ bánh đều được đóng gói tỉ mỉ bằng túi giữ nhiệt kép.'}
+                      : 'Cảm ơn bạn đã lựa chọn bánh ngọt thủ công & trà thanh mát từ Bloom Cake & Coffe Nha Trang. Mọi mẻ bánh đều được đóng gói tỉ mỉ bằng túi giữ nhiệt kép.'}
                   </p>
                 </div>
               </div>
@@ -300,11 +300,11 @@ export const OrderTrackingScreen: React.FC = () => {
                         </div>
                         <div className="flex items-center gap-2 w-full sm:w-auto">
                           <a
-                            href="tel:02363887844"
+                            href="tel:19008899"
                             className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-primary text-on-primary font-label-lg text-xs font-bold shadow-sm hover:scale-105 active:scale-95 transition-all"
                           >
                             <span className="material-symbols-outlined text-[18px]">call</span>
-                            <span>Gọi Quầy: 0236 388 7844</span>
+                            <span>Gọi Quầy: 1900 8899</span>
                           </a>
                         </div>
                       </div>
@@ -486,7 +486,7 @@ export const OrderTrackingScreen: React.FC = () => {
                     <div>
                       <span className="font-label-sm text-[10px] text-outline block font-bold">NGÂN HÀNG</span>
                       <span className="font-label-lg text-xs font-bold text-on-surface">
-                        Vietcombank - CN Đà Nẵng
+                        Vietcombank - CN Nha Trang
                       </span>
                     </div>
                     <span className="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-[10px] text-secondary font-bold">
@@ -616,7 +616,7 @@ export const OrderTrackingScreen: React.FC = () => {
                   </div>
                   {order.discount > 0 && (
                     <div className="flex justify-between text-secondary font-semibold">
-                      <span>Voucher du lịch Đà Nẵng</span>
+                      <span>Voucher du lịch Nha Trang</span>
                       <span>-{order.discount.toLocaleString('vi-VN')} VNĐ</span>
                     </div>
                   )}
@@ -677,11 +677,11 @@ export const OrderTrackingScreen: React.FC = () => {
                   <span>Theo Dõi Qua Zalo / SMS</span>
                 </button>
                 <a
-                  href="tel:02363911515"
+                  href="tel:19008899"
                   className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-primary text-on-primary font-label-lg text-xs font-bold hover:bg-primary-container shadow-[0_8px_20px_rgba(255,51,102,0.24)] hover:scale-105 active:scale-95 transition-all"
                 >
                   <span className="material-symbols-outlined text-[18px]">phone</span>
-                  <span>Hotline Chi Nhánh: 0236 391 1515</span>
+                  <span>Hotline Chi Nhánh: 1900 8899</span>
                 </a>
                 <button
                   onClick={() => setCurrentScreen('menu')}

@@ -21,7 +21,7 @@ export const AboutScreen: React.FC = () => {
                   className="w-5 h-5 rounded-full object-cover ring-1 ring-primary/40"
                 />
                 <span className="font-label-sm text-xs uppercase tracking-wider font-bold">
-                  Gastro Pop Heritage • Đà Nẵng Since 2018
+                  Gastro Pop Heritage • Nha Trang Since 2018
                 </span>
               </div>
               <h1 className="font-headline-lg text-4xl lg:text-5xl text-on-surface tracking-tight leading-tight">
@@ -32,7 +32,7 @@ export const AboutScreen: React.FC = () => {
                 <span className="font-display-custom font-bold">Giữa Lòng Thành Phố Biển</span>
               </h1>
               <p className="font-body-lg text-base text-on-surface-variant max-w-2xl leading-relaxed">
-                Bloom Cake &amp; Coffe ra đời từ giấc mơ gói trọn nắng vàng Mỹ Khê, ngọn gió biển lộng lẫy cùng sự khắt khe của trường phái bánh nướng thủ công nước Pháp. Một phong cách ẩm thực tươi mới, nơi từng thớ ngàn lớp giòn rụm tỏa ngát hương bơ thượng hạng và bọt matcha Kyoto sóng sánh xanh mướt.
+                Bloom Cake &amp; Coffe ra đời từ giấc mơ gói trọn nắng vàng Nha Trang, ngọn gió biển lộng lẫy cùng sự khắt khe của trường phái bánh nướng thủ công nước Pháp. Một phong cách ẩm thực tươi mới, nơi từng thớ ngàn lớp giòn rụm tỏa ngát hương bơ thượng hạng và bọt matcha Kyoto sóng sánh xanh mướt.
               </p>
 
               {/* Interactive Highlights */}
@@ -82,7 +82,7 @@ export const AboutScreen: React.FC = () => {
                 <div className="w-full h-[460px] rounded-3xl overflow-hidden shadow-2xl bg-surface-container border border-outline-variant/30">
                   <img
                     className="w-full h-full object-cover transform hover:scale-105 transition duration-700"
-                    alt="Bếp bánh thủ công Bloom Cake Đà Nẵng"
+                    alt="Bếp bánh thủ công Bloom Cake Nha Trang"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhGR1T64bXu74-T6dwkji_R0dgzlkc23TnQcR4axvqZgaWjrmsVoBWPhtxjv5aYZYo8W9En3MI9e-yeDQ-KwLDWhRBK6JFJ-cr8nug8JWi5Gr2N03kc5IKFSRhdahUYjvvEJcOoV2TatIvgcYQKd89kHsrk-pXa2vQW1t0Nt9G-z2ux7UU7PdU6dmgafVxhJtgDWUMi6xSmQt2yR7td29bLel5pLWs9PunQCQKnpcbMHyRo84WJx0"
                   />
                 </div>
@@ -124,7 +124,7 @@ export const AboutScreen: React.FC = () => {
               <span className="font-display-custom font-bold">Sự Giao Thoa Giữa Kỷ Luật Cổ Điển &amp; Năng Lượng Nhiệt Đới</span>
             </h2>
             <p className="font-body-md text-sm text-on-surface-variant leading-relaxed">
-              Chúng tôi không phục vụ những chiếc bánh đại trà đông lạnh. Tại Bloom Cake Đà Nẵng, mỗi mẻ nướng là một buổi trình diễn sống động tôn vinh tay nghề thủ công, sự hào phóng của thiên nhiên biển cả và nụ cười rạng rỡ của người làm nghề.
+              Chúng tôi không phục vụ những chiếc bánh đại trà đông lạnh. Tại Bloom Cake Nha Trang, mỗi mẻ nướng là một buổi trình diễn sống động tôn vinh tay nghề thủ công, sự hào phóng của thiên nhiên biển cả và nụ cười rạng rỡ của người làm nghề.
             </p>
           </div>
 
@@ -180,7 +180,7 @@ export const AboutScreen: React.FC = () => {
                   <span className="material-symbols-outlined text-[28px]">sunny</span>
                 </div>
                 <h3 className="font-headline-md text-lg text-on-surface font-bold">
-                  Hồn Biển Đà Nẵng Phóng Khoáng
+                  Hồn Biển Nha Trang Phóng Khoáng
                 </h3>
                 <p className="font-body-md text-sm text-on-surface-variant leading-relaxed">
                   Tâm thế người miền Trung chân chất hào sảng. Chúng tôi đem nắng hè, dừa non xiêm, xoài cát Hòa Lộc và muối biển Sa Huỳnh kết hợp vào những chiếc bánh tart, entremet hiện đại.
@@ -196,7 +196,7 @@ export const AboutScreen: React.FC = () => {
             <div className="md:col-span-7 bg-surface-container-highest rounded-3xl overflow-hidden relative min-h-[260px] border border-outline-variant/30">
               <img
                 className="w-full h-full object-cover"
-                alt="Không gian tiệm bánh Bloom Cake Đà Nẵng"
+                alt="Không gian tiệm bánh Bloom Cake Nha Trang"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtyaWxEcZZP9OLMzv3MJo7Agd81Wk4KGNwjFcx4ueHHVOxD387geTs5yATELpgqqKp6qFih5ddAQKnQk0gByXoiEDKNmAVV0oXMoZXNLkgytBKB5A3hqel2ABCPbBBIMWpHv1F0MrTJSPiwK5BYAlXtxk68GRp3Zg9ri0O4ubMRQmCQv4xgmrU7UFN8mRj6P6sLi9p8zqZPtkQWpBVdo6YCf8odP-lCvczxoimkkdHkwdiaYkPyZk"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-on-surface/20 to-transparent p-8 flex flex-col justify-end">
@@ -291,7 +291,7 @@ export const AboutScreen: React.FC = () => {
                 Lòng Hiếu Khách &amp; Đồng Hành Cùng Du Khách
               </h3>
               <p className="font-body-md text-xs text-on-surface-variant leading-relaxed">
-                Đà Nẵng níu chân du khách bằng sự chân thành, và Bloom Cake cũng vậy. Hỗ trợ giao tận sảnh resort, khách sạn ven biển trong 30 phút. Hộp quà mang về thiết kế thanh lịch kèm túi giữ nhiệt, bảo đảm độ giòn thơm nguyên vẹn sau chuyến bay.
+                Nha Trang níu chân du khách bằng sự chân thành, và Bloom Cake cũng vậy. Hỗ trợ giao tận sảnh resort, khách sạn ven biển trong 30 phút. Hộp quà mang về thiết kế thanh lịch kèm túi giữ nhiệt, bảo đảm độ giòn thơm nguyên vẹn sau chuyến bay.
               </p>
               <ul className="mt-6 space-y-2 border-t border-surface-container pt-4 font-body-sm text-xs text-on-surface font-semibold">
                 <li className="flex items-center gap-2">
@@ -319,7 +319,7 @@ export const AboutScreen: React.FC = () => {
               Pastry Chefs &amp; Tea Sommeliers
             </h2>
             <p className="font-body-md text-sm text-on-surface-variant">
-              Gặp gỡ những người giữ lửa cho hương vị Bloom Cake: am hiểu từng gram bột, cảm nhận từng độ ẩm không khí Đà Nẵng và trân quý từng búp trà xanh.
+              Gặp gỡ những người giữ lửa cho hương vị Bloom Cake: am hiểu từng gram bột, cảm nhận từng độ ẩm không khí Nha Trang và trân quý từng búp trà xanh.
             </p>
           </div>
 
@@ -397,10 +397,10 @@ export const AboutScreen: React.FC = () => {
               Hành Trình Khát Vọng
             </span>
             <h2 className="font-headline-lg text-3xl text-on-surface font-bold">
-              Từ Góc Bếp Nhỏ Hàm Nghi Đến 6 Điểm Hẹn Nắng Gió
+              Từ Góc Bếp Nhỏ Hàn Thuyên Đến 6 Điểm Hẹn Nắng Gió
             </h2>
             <p className="font-body-md text-sm text-on-surface-variant">
-              Hành trình 6 năm không ngừng nâng chuẩn chất lượng để trở thành thương hiệu bánh ngọt biểu tượng của thành phố Đà Nẵng.
+              Hành trình 6 năm không ngừng nâng chuẩn chất lượng để trở thành thương hiệu bánh ngọt biểu tượng của thành phố Nha Trang.
             </p>
           </div>
 
@@ -412,7 +412,7 @@ export const AboutScreen: React.FC = () => {
                 </div>
                 <h4 className="font-headline-sm text-base text-on-surface mb-2 font-bold">Góc Bếp Đầu Tiên</h4>
                 <p className="font-body-sm text-xs text-on-surface-variant leading-relaxed">
-                  Khởi đầu tại 784 Hàm Nghi với chiếc lò nướng 2 tầng và niềm say mê mang hương vị croissant bơ Pháp đích thực đến người dân Đà Nẵng.
+                  Khởi đầu tại 12 Hàn Thuyên với chiếc lò nướng 2 tầng và niềm say mê mang hương vị croissant bơ Pháp đích thực đến người dân Nha Trang.
                 </p>
               </div>
               <div className="mt-6 pt-3 border-t border-surface-container font-label-sm text-[11px] text-primary font-bold">
@@ -427,7 +427,7 @@ export const AboutScreen: React.FC = () => {
                 </div>
                 <h4 className="font-headline-sm text-base text-on-surface mb-2 font-bold">Đón Sóng Uji Matcha</h4>
                 <p className="font-body-sm text-xs text-on-surface-variant leading-relaxed">
-                  Mở rộng cơ sở 242 Bạch Đằng nhìn ngắm Cầu Rồng và bắt tay hợp tác trực tiếp với các đồn điền trà Kyoto, ra đời concept Gastro Pop rực rỡ.
+                  Mở rộng cơ sở 20 Trần Phú nhìn ngắm vịnh Nha Trang và bắt tay hợp tác trực tiếp với các đồn điền trà Kyoto, ra đời concept Gastro Pop rực rỡ.
                 </p>
               </div>
               <div className="mt-6 pt-3 border-t border-surface-container font-label-sm text-[11px] text-secondary font-bold">
@@ -440,9 +440,9 @@ export const AboutScreen: React.FC = () => {
                 <div className="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm mb-4 shadow-md">
                   2022
                 </div>
-                <h4 className="font-headline-sm text-base text-on-surface mb-2 font-bold">Tiến Ra Bờ Biển Mỹ Khê</h4>
+                <h4 className="font-headline-sm text-base text-on-surface mb-2 font-bold">Tiến Ra Bờ Biển Nha Trang</h4>
                 <p className="font-body-sm text-xs text-on-surface-variant leading-relaxed">
-                  Hiện diện tại Võ Văn Kiệt và Võ Nguyên Giáp. Dịch vụ Bloom Express 30 phút giao nóng tận resort biển trở thành điểm cộng lớn cho du khách.
+                  Hiện diện tại Lê Thánh Tôn và Trần Phú. Dịch vụ Bloom Express 30 phút giao nóng tận resort biển trở thành điểm cộng lớn cho du khách.
                 </p>
               </div>
               <div className="mt-6 pt-3 border-t border-surface-container font-label-sm text-[11px] text-primary font-bold">
@@ -457,7 +457,7 @@ export const AboutScreen: React.FC = () => {
                 </div>
                 <h4 className="font-headline-sm text-base text-on-surface mb-2 font-bold">6 Điểm Đến Biểu Tượng</h4>
                 <p className="font-body-sm text-xs text-on-surface-variant leading-relaxed">
-                  Phục vụ hơn 1.500 lượt khách mỗi ngày khắp 6 cơ sở, trở thành món quà check-in không thể bỏ lỡ khi ghé thăm thành phố Đà Nẵng.
+                  Phục vụ hơn 1.500 lượt khách mỗi ngày khắp 6 cơ sở, trở thành món quà check-in không thể bỏ lỡ khi ghé thăm thành phố Nha Trang.
                 </p>
               </div>
               <div className="mt-6 pt-3 border-t border-surface-container font-label-sm text-[11px] text-primary font-bold">
@@ -476,13 +476,13 @@ export const AboutScreen: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
               <div className="lg:col-span-8 space-y-4">
                 <span className="inline-block px-3 py-1 rounded-full bg-white/20 text-on-primary-container font-label-sm text-xs font-bold uppercase tracking-wider">
-                  Lời Mời Ngọt Ngào Từ Đà Nẵng
+                  Lời Mời Ngọt Ngào Từ Nha Trang
                 </span>
                 <h2 className="font-display-lg text-3xl lg:text-4xl font-bold leading-tight">
-                  Đến Đà Nẵng, Đừng Quên Ghé Thăm Mùi Bánh Mới Của Bloom Cake
+                  Đến Nha Trang, Đừng Quên Ghé Thăm Mùi Bánh Mới Của Bloom Cake
                 </h2>
                 <p className="font-body-lg text-base text-white/90 max-w-2xl leading-relaxed">
-                  Dù bạn đang dạo bước bên bờ sông Hàn thơ mộng hay đang tận hưởng làn gió mặn mà tại bãi biển Mỹ Khê, luôn có một góc Bloom Cake ấm áp, ngát hương bơ và sẵn sàng phục vụ tách trà tươi nhất cho bạn.
+                  Dù bạn đang dạo bước bên bờ biển Trần Phú thơ mộng hay đang tận hưởng làn gió mặn mà tại bãi biển Nha Trang, luôn có một góc Bloom Cake ấm áp, ngát hương bơ và sẵn sàng phục vụ tách trà tươi nhất cho bạn.
                 </p>
                 <div className="pt-4 flex flex-wrap gap-4">
                   <button

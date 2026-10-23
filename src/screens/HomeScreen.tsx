@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useApp } from '../context/AppContext';
+import { NhaTrangMap } from '../components/NhaTrangMap';
 import { SIGNATURE_ITEMS, BRANCHES } from '../data/mockData';
 
 export const HomeScreen: React.FC = () => {
@@ -77,7 +78,7 @@ export const HomeScreen: React.FC = () => {
                 </span>
               </h1>
               <p className="font-body-lg text-base lg:text-lg text-on-surface-variant max-w-xl leading-relaxed">
-                Tiệm bánh thủ công Gastro Pop độc quyền tại thành phố biển Đà Nẵng. Thưởng thức hương bơ ngào ngạt bên bờ sông Hàn thơ mộng hay nhâm nhi matcha lạnh ngắm hoàng hôn bãi biển Mỹ Khê.
+                Tiệm bánh thủ công Gastro Pop độc quyền tại thành phố biển Nha Trang. Thưởng thức hương bơ ngào ngạt bên bờ biển Trần Phú thơ mộng hay nhâm nhi matcha lạnh đón bình minh bãi biển Nha Trang.
               </p>
             </div>
 
@@ -315,7 +316,7 @@ export const HomeScreen: React.FC = () => {
             {/* Floating Testimonial mini card */}
             <div className="absolute -bottom-6 right-6 p-4 rounded-2xl bg-surface-container-lowest shadow-xl max-w-xs hidden sm:block border border-outline-variant/30">
               <p className="font-body-sm text-xs text-black italic font-script text-base">
-                "Vị umami thanh nhẹ, hậu vị sâu ngọt không hề chát gắt. Chuẩn gu Uji bậc nhất Đà Nẵng!"
+                "Vị umami thanh nhẹ, hậu vị sâu ngọt không hề chát gắt. Chuẩn gu Uji bậc nhất Nha Trang!"
               </p>
               <div className="mt-2 flex items-center gap-2">
                 <div className="w-6 h-6 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-bold text-[10px]">
@@ -395,7 +396,7 @@ export const HomeScreen: React.FC = () => {
               <span className="font-display-custom font-bold">Chuẩn Pastry &amp; Giao Tận Resort</span>
             </h2>
             <p className="font-body-md text-sm text-on-surface-variant">
-              Chăm chút từng lớp bơ nướng tới bao bì bảo quản giữ lạnh khi vận chuyển dọc bờ biển Đà Nẵng.
+              Chăm chút từng lớp bơ nướng tới bao bì bảo quản giữ lạnh khi vận chuyển dọc bờ biển Nha Trang.
             </p>
           </div>
 
@@ -434,7 +435,7 @@ export const HomeScreen: React.FC = () => {
               </div>
               <h3 className="font-headline-md text-lg font-bold text-on-surface">Hộp Giữ Nhiệt 30-45 Phút</h3>
               <p className="font-body-md text-sm text-on-surface-variant leading-relaxed">
-                Bánh lạnh được đóng thùng xốp chuyên dụng với túi gel đá khô. Bánh croissant được giữ trong hộp thông khí chống đọng sương, giao nguyên vẹn đến các resort Mỹ Khê &amp; Sơn Trà.
+                Bánh lạnh được đóng thùng xốp chuyên dụng với túi gel đá khô. Bánh croissant được giữ trong hộp thông khí chống đọng sương, giao nguyên vẹn đến các resort Nha Trang &amp; Nha Trang.
               </p>
               <div className="flex items-center gap-2 text-primary font-label-md text-xs font-bold pt-1">
                 <span className="material-symbols-outlined text-[18px]">check_circle</span>
@@ -455,7 +456,7 @@ export const HomeScreen: React.FC = () => {
               </span>
               <h2 className="font-headline-lg text-3xl lg:text-4xl text-on-surface mt-2">
                 <span className="font-script text-4xl text-black font-normal pr-1">Hệ Thống</span>{' '}
-                <span className="font-display-custom font-bold">6 Cơ Sở Tại Đà Nẵng</span>
+                <span className="font-display-custom font-bold">6 Cơ Sở Tại Nha Trang</span>
               </h2>
               <p className="font-body-md text-sm text-on-surface-variant">
                 Khám phá không gian Gastro Pop độc đáo tại các vị trí đắc địa nhất thành phố.
@@ -463,27 +464,22 @@ export const HomeScreen: React.FC = () => {
             </div>
             <div className="flex items-center gap-2 text-on-surface font-label-md text-xs bg-surface-container-high px-4 py-2 rounded-full font-bold">
               <span className="w-2.5 h-2.5 rounded-full bg-secondary animate-ping"></span>
-              <span>Tất cả 6 cơ sở đang hoạt động phục vụ</span>
+              <span>6 địa chỉ tham khảo tại Nha Trang</span>
             </div>
           </div>
 
           {/* Interactive Branch Mosaic Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            {/* Da Nang Map Visual Trigger */}
+            {/* Nha Trang Map Visual Trigger */}
             <div className="lg:col-span-6 rounded-3xl overflow-hidden shadow-xl bg-surface-container-high relative border border-outline-variant/30">
-              <div
-                className="w-full h-[480px] bg-cover bg-center rounded-3xl"
-                style={{
-                  backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSjt3_TM1O_s5_TUWlaphm11gP9Ih9U4Zjbsi3j5m0keQQsN18MwIld4WJ8aqr7kvdHluBg-4ZME_v4GQoIEeO6IPZTXleih-LPq2jY5edlK5efZVoJRozgnySqXO73jo2pQx7u82Cyp4CxhgY1zwS8yCKed5wuQ839tH32YAQ_kui1ljt8Su6-mFdzg0Q2m5qwb_Bf6kQ7cKLb2722AJMK0tlPLSO6FyJ-QCMNVPXIX4xxehktD8')`,
-                }}
-              />
+              <NhaTrangMap className="w-full h-[480px] rounded-3xl" />
               <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-surface-container-lowest/90 backdrop-blur-md shadow-lg flex items-center justify-between border border-outline-variant/20">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">
                     <span className="material-symbols-outlined text-[20px]">pin_drop</span>
                   </div>
                   <div>
-                    <p className="font-headline-sm text-sm font-bold text-on-surface">Bao phủ 4 quận trọng điểm</p>
+                    <p className="font-headline-sm text-sm font-bold text-on-surface">Bao phủ các tuyến phố Nha Trang</p>
                     <p className="font-body-sm text-xs text-on-surface-variant">Bán kính giao hàng nhanh trong 5km quanh bạn</p>
                   </div>
                 </div>
@@ -512,7 +508,7 @@ export const HomeScreen: React.FC = () => {
                     </div>
                     <h4 className="font-headline-sm text-base text-on-surface font-bold">{b.name}</h4>
                     <p className="font-body-sm text-xs text-on-surface-variant">
-                      Q. {b.districtName} • {b.subtitle.split('-')[0]}
+                      Khu vực {b.districtName} • {b.subtitle.split('-')[0]}
                     </p>
                   </div>
                   <div className="pt-2 border-t border-surface-container flex items-center justify-between text-on-surface-variant font-label-sm text-xs">
@@ -545,7 +541,7 @@ export const HomeScreen: React.FC = () => {
               <span className="font-display-custom font-bold">Trải Nghiệm Tại Bloom Cake?</span>
             </h2>
             <p className="font-body-md text-sm text-on-surface-variant">
-              Những dòng cảm nhận chân thực nhất từ du khách, cư dân Đà Nẵng và những tín đồ bánh ngọt.
+              Những dòng cảm nhận chân thực nhất từ du khách, cư dân Nha Trang và những tín đồ bánh ngọt.
             </p>
           </div>
 
@@ -559,7 +555,7 @@ export const HomeScreen: React.FC = () => {
                   ))}
                 </div>
                 <p className="font-body-md text-sm text-on-surface leading-relaxed italic">
-                  "Đi nghỉ ở InterContinental Đà Nẵng, mình đặt hộp bánh Croissant Lava và bánh kem dâu giao tận nơi. Thùng xốp giữ lạnh cực kỳ chuyên nghiệp, bánh đến tay vẫn lạnh mát và bông xốp hoàn hảo. 10/10!"
+                  "Đi nghỉ ở InterContinental Nha Trang, mình đặt hộp bánh Croissant Lava và bánh kem dâu giao tận nơi. Thùng xốp giữ lạnh cực kỳ chuyên nghiệp, bánh đến tay vẫn lạnh mát và bông xốp hoàn hảo. 10/10!"
                 </p>
               </div>
               <div className="flex items-center gap-3 pt-4 border-t border-surface-container">
@@ -582,7 +578,7 @@ export const HomeScreen: React.FC = () => {
                   ))}
                 </div>
                 <p className="font-body-md text-sm text-on-surface leading-relaxed italic">
-                  "Uji Matcha ở đây chuẩn vị Nhật nhất Đà Nẵng. Món Dirty Matcha đánh tay bông bọt uống cùng bánh Canelé nướng giòn vỏ là combo hoàn hảo cho mỗi buổi sáng làm việc bên bờ sông Hàn."
+                  "Uji Matcha ở đây chuẩn vị Nhật nhất Nha Trang. Món Dirty Matcha đánh tay bông bọt uống cùng bánh Canelé nướng giòn vỏ là combo hoàn hảo cho mỗi buổi sáng làm việc bên bờ biển Trần Phú."
                 </p>
               </div>
               <div className="flex items-center gap-3 pt-4 border-t border-surface-container">
@@ -591,7 +587,7 @@ export const HomeScreen: React.FC = () => {
                 </div>
                 <div>
                   <p className="font-label-md text-xs text-on-surface font-bold">Minh Huy (Food Blogger)</p>
-                  <p className="font-label-sm text-[10px] text-on-surface-variant">@danang_foodie</p>
+                  <p className="font-label-sm text-[10px] text-on-surface-variant">@nhatrang_foodie</p>
                 </div>
               </div>
             </div>
@@ -605,7 +601,7 @@ export const HomeScreen: React.FC = () => {
                   ))}
                 </div>
                 <p className="font-body-md text-sm text-on-surface leading-relaxed italic">
-                  "Không gian cơ sở Bạch Đằng view sông cực chill, tông màu hồng phấn - xanh matcha siêu cưng chụp góc nào cũng đẹp chuẩn Gastro Pop. Điểm đến nhất định phải ghé khi tới Đà Nẵng!"
+                  "Không gian cơ sở Trần Phú gần biển cực chill, tông màu hồng phấn - xanh matcha siêu cưng chụp góc nào cũng đẹp chuẩn Gastro Pop. Điểm đến nhất định phải ghé khi tới Nha Trang!"
                 </p>
               </div>
               <div className="flex items-center gap-3 pt-4 border-t border-surface-container">
@@ -641,7 +637,7 @@ export const HomeScreen: React.FC = () => {
                 <span className="font-display-custom">Giao Tới Trong 30 Phút.</span>
               </h2>
               <p className="font-body-lg text-base text-white/90">
-                Đội ngũ shipper riêng của Bloom Cake sẵn sàng giao mẻ bánh vừa lấy từ lò trực tiếp đến cửa phòng của bạn tại Đà Nẵng.
+                Đội ngũ shipper riêng của Bloom Cake sẵn sàng giao mẻ bánh vừa lấy từ lò trực tiếp đến cửa phòng của bạn tại Nha Trang.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-4 flex-shrink-0">

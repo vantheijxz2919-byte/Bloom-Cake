@@ -41,7 +41,7 @@ export const DealsScreen: React.FC = () => {
             <div className="flex items-center gap-2 font-label-md text-xs text-on-surface-variant">
               <span>Trang chủ</span>
               <span className="opacity-40">/</span>
-              <span className="text-primary font-bold">Ưu Đãi Đặc Biệt Đà Nẵng</span>
+              <span className="text-primary font-bold">Ưu Đãi Đặc Biệt Nha Trang</span>
             </div>
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-xs tracking-wide uppercase font-bold">
               <span className="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
@@ -145,7 +145,7 @@ export const DealsScreen: React.FC = () => {
           <div className="flex items-center gap-2">
             <span className="font-label-md text-xs text-on-surface-variant">Cơ sở còn hàng nhiều nhất:</span>
             <span className="font-label-md text-xs bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-bold">
-              784 Hàm Nghi &amp; 242 Bạch Đằng
+              12 Hàn Thuyên &amp; 20 Trần Phú
             </span>
           </div>
         </div>
@@ -322,7 +322,7 @@ export const DealsScreen: React.FC = () => {
           <div>
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-xs uppercase font-bold mb-2">
               <span className="material-symbols-outlined text-[16px]">redeem</span>
-              <span>Đặc Sản Du Lịch • Mang Đà Nẵng Về Nhà</span>
+              <span>Đặc Sản Du Lịch • Mang Nha Trang Về Nhà</span>
             </div>
             <h2 className="font-headline-lg text-3xl text-on-surface font-bold">Quà Lưu Niệm Ưu Đãi</h2>
             <p className="font-body-md text-sm text-on-surface-variant">
@@ -403,7 +403,7 @@ export const DealsScreen: React.FC = () => {
               <span className="material-symbols-outlined text-[16px]">confirmation_number</span>
               <span>Kho Mã Giảm Giá Độc Quyền</span>
             </div>
-            <h2 className="font-headline-lg text-3xl text-on-surface font-bold">Mã Ưu Đãi Du Lịch Đà Nẵng</h2>
+            <h2 className="font-headline-lg text-3xl text-on-surface font-bold">Mã Ưu Đãi Du Lịch Nha Trang</h2>
             <p className="font-body-md text-sm text-on-surface-variant">
               Nhấp sao chép mã và dán tại bước thanh toán online hoặc đưa mã QR cho nhân viên thu ngân tại 6 cơ sở Bloom Cake
             </p>
@@ -491,7 +491,7 @@ export const DealsScreen: React.FC = () => {
                 <div>
                   <p className="font-label-lg text-sm text-on-surface mb-1 font-bold">Nhận bánh hỏa tốc</p>
                   <p className="font-body-sm text-xs text-on-surface-variant">
-                    Bếp nướng mẻ mới và shipper giao tận tay trong 30 phút khắp khu vực nội thành Đà Nẵng.
+                    Bếp nướng mẻ mới và shipper giao tận tay trong 30 phút khắp khu vực nội thành Nha Trang.
                   </p>
                 </div>
               </div>
