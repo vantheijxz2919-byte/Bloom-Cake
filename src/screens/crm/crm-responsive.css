@@ -1,0 +1,139 @@
+/* Keep responsive rules inside the operational portal. */
+.crm-shell {
+  width: 100%;
+  min-width: 0;
+  min-height: 100dvh;
+}
+
+.crm-content :where(.grid > *, .flex > *) {
+  min-width: 0;
+}
+
+.crm-content :where(input, select, textarea) {
+  max-width: 100%;
+}
+
+.crm-content svg {
+  flex-shrink: 0;
+}
+
+.crm-shell :where(button, input, select, textarea):focus-visible {
+  outline: 2px solid #c33d69;
+  outline-offset: 2px;
+}
+
+.crm-content .overflow-x-auto {
+  max-width: 100%;
+  overscroll-behavior-x: contain;
+}
+
+.crm-drawer {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (max-width: 1023px) {
+  .crm-content {
+    padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .crm-content :where(button, [role="button"]) {
+    min-height: 40px;
+    touch-action: manipulation;
+  }
+
+  .crm-content button:has(> svg:only-child) {
+    min-width: 40px;
+  }
+
+  .crm-content :where(input:not([type="checkbox"]):not([type="radio"]), select, textarea),
+  .crm-header select {
+    min-height: 44px;
+    font-size: 16px;
+  }
+
+  .crm-content .flex.p-1.rounded-xl {
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+  }
+
+  .crm-content .overflow-x-auto > button,
+  .crm-content .flex.p-1.rounded-xl > button {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .crm-content div:has(> svg:only-child) {
+    flex-shrink: 0;
+  }
+
+  .crm-content table {
+    min-width: 640px;
+  }
+
+  .crm-content .overflow-x-auto:has(> table)::before {
+    content: "Vuốt ngang để xem đầy đủ bảng →";
+    display: block;
+    position: sticky;
+    left: 0;
+    width: fit-content;
+    padding: 0.75rem 1rem;
+    font-size: 12px;
+    color: #57534e;
+  }
+
+  .crm-content .fixed.inset-0 > div,
+  .crm-role-dialog {
+    max-height: calc(100dvh - 2rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .crm-content .fixed.inset-0 {
+    padding: 0.75rem;
+  }
+
+  .crm-pos {
+    padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .crm-pos-line {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+  }
+
+  .crm-pos-line > div:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 639px) {
+  .crm-content .flex.items-center.justify-between {
+    flex-wrap: wrap;
+    row-gap: 0.75rem;
+  }
+
+  .crm-content .grid.grid-cols-2.md\:grid-cols-4,
+  .crm-content .grid.grid-cols-2.md\:grid-cols-5 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .crm-content .p-6 {
+    padding: 1rem;
+  }
+
+  .crm-content .fixed.inset-0 > div > .flex.items-center.justify-between {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding-inline: 1rem;
+  }
+
+  .crm-content .fixed.inset-0 > div > .flex.items-center.justify-between > div {
+    flex: 1;
+  }
+
+  .crm-content .fixed.inset-0 > div > .flex.items-center.justify-between > button {
+    flex-shrink: 0;
+  }
+}

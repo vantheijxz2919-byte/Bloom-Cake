@@ -59,6 +59,13 @@ export const POSScreen: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCat, setSelectedCat] = useState('all');
   const [memberSearchResult, setMemberSearchResult] = useState<string | null>(null);
+  const [mobilePanel, setMobilePanel] = useState<'catalog' | 'order'>('catalog');
+  const itemCount = posCart.reduce((total, item) => total + item.quantity, 0);
+
+  const openMobilePanel = (panel: 'catalog' | 'order') => {
+    setMobilePanel(panel);
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
 
   // Filter items
   const filteredItems = MENU_ITEMS.filter((item) => {
@@ -102,9 +109,21 @@ export const POSScreen: React.FC = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+    <div className="crm-pos grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6 items-start">
+      <div className="lg:hidden grid grid-cols-2 gap-2 rounded-2xl bg-white p-1.5 border border-stone-200" role="group" aria-label="Màn hình POS">
+        <button type="button" aria-controls="pos-catalog" aria-pressed={mobilePanel === 'catalog'}
+          onClick={() => openMobilePanel('catalog')}
+          className={`rounded-xl py-2.5 text-sm font-bold ${mobilePanel === 'catalog' ? 'bg-stone-900 text-white' : 'text-stone-600'}`}>
+          Chọn món
+        </button>
+        <button type="button" aria-controls="pos-order" aria-pressed={mobilePanel === 'order'}
+          onClick={() => openMobilePanel('order')}
+          className={`rounded-xl py-2.5 text-sm font-bold ${mobilePanel === 'order' ? 'bg-primary text-white' : 'text-stone-600'}`}>
+          Đơn hàng ({itemCount})
+        </button>
+      </div>
       {/* Left 7 cols: Touch Catalog */}
-      <div className="lg:col-span-7 space-y-4">
+      <div id="pos-catalog" aria-label="Danh sách món POS" className={`${mobilePanel === 'catalog' ? 'block' : 'hidden'} lg:block lg:col-span-7 min-w-0 space-y-4`}>
         {/* Search & Order Type Bar */}
         <div className="bg-white p-4 rounded-2xl shadow-xs border border-stone-200 space-y-3">
           <div className="flex flex-wrap items-center justify-between gap-3">
@@ -200,12 +219,14 @@ export const POSScreen: React.FC = () => {
         </div>
 
         {/* Product Cards Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-h-[620px] overflow-y-auto p-1">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 lg:max-h-[620px] lg:overflow-y-auto p-0.5">
           {filteredItems.map((item) => (
-            <div
+            <button
+              type="button"
+              aria-label={`Thêm ${item.name} vào đơn`}
               key={item.id}
               onClick={() => handleQuickAdd(item)}
-              className="bg-white rounded-xl p-3 border border-stone-200 hover:border-primary hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group"
+              className="bg-white text-left min-w-0 rounded-xl p-2.5 sm:p-3 border border-stone-200 hover:border-primary hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group"
             >
               <div>
                 <div className="relative h-28 rounded-lg overflow-hidden mb-2 bg-stone-100">
@@ -220,7 +241,7 @@ export const POSScreen: React.FC = () => {
                     </span>
                   )}
                 </div>
-                <h4 className="font-bold text-xs text-stone-900 line-clamp-1 group-hover:text-primary">
+                <h4 className="font-bold text-sm text-stone-900 line-clamp-2 group-hover:text-primary">
                   {item.name}
                 </h4>
                 <p className="text-[10px] text-stone-500 line-clamp-1">{item.description}</p>
@@ -232,13 +253,13 @@ export const POSScreen: React.FC = () => {
                   <Plus className="w-3.5 h-3.5" />
                 </span>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>
 
       {/* Right 5 cols: Order Ticket & Checkout Panel */}
-      <div className="lg:col-span-5 bg-white rounded-2xl shadow-sm border border-stone-200 p-5 space-y-4">
+      <div id="pos-order" aria-label="Đơn hàng POS" className={`${mobilePanel === 'order' ? 'block' : 'hidden'} lg:block lg:col-span-5 min-w-0 bg-white rounded-2xl shadow-sm border border-stone-200 p-4 sm:p-5 space-y-4`}>
         {/* Ticket Header & Customer Lookup */}
         <div className="space-y-2 border-b border-stone-200 pb-3">
           <div className="flex items-center justify-between">
@@ -286,15 +307,15 @@ export const POSScreen: React.FC = () => {
         </div>
 
         {/* Cart Item List */}
-        <div className="max-h-[220px] overflow-y-auto space-y-2 divide-y divide-stone-100">
+        <div className="lg:max-h-[220px] lg:overflow-y-auto space-y-2 divide-y divide-stone-100">
           {posCart.length === 0 ? (
             <div className="py-8 text-center text-stone-400 text-xs space-y-1">
               <p>Chưa có món nào được chọn</p>
-              <p className="text-[10px]">Chạm vào sản phẩm bên trái để thêm vào đơn</p>
+              <p className="text-[11px]">Chọn món trong danh sách để thêm vào đơn</p>
             </div>
           ) : (
             posCart.map((item) => (
-              <div key={item.id} className="pt-2 first:pt-0 flex items-center justify-between gap-2 text-xs">
+              <div key={item.id} className="crm-pos-line pt-2 first:pt-0 flex items-center justify-between gap-2 text-xs">
                 <div className="flex-1 min-w-0">
                   <div className="font-bold text-stone-800 truncate">{item.name}</div>
                   {item.selectedOption && (
@@ -307,6 +328,7 @@ export const POSScreen: React.FC = () => {
 
                 <div className="flex items-center gap-1.5">
                   <button
+                    aria-label={`Giảm số lượng ${item.name}`}
                     onClick={() => updatePosQty(item.id, -1)}
                     className="p-1 rounded-md bg-stone-100 hover:bg-stone-200 text-stone-600"
                   >
@@ -314,6 +336,7 @@ export const POSScreen: React.FC = () => {
                   </button>
                   <span className="w-5 text-center font-bold text-stone-800">{item.quantity}</span>
                   <button
+                    aria-label={`Tăng số lượng ${item.name}`}
                     onClick={() => updatePosQty(item.id, 1)}
                     className="p-1 rounded-md bg-stone-100 hover:bg-stone-200 text-stone-600"
                   >
@@ -326,6 +349,7 @@ export const POSScreen: React.FC = () => {
                 </div>
 
                 <button
+                  aria-label={`Xóa ${item.name} khỏi đơn`}
                   onClick={() => removeFromPosCart(item.id)}
                   className="p-1 text-stone-400 hover:text-red-600"
                 >
@@ -507,6 +531,13 @@ export const POSScreen: React.FC = () => {
         <p className="text-[10px] text-stone-400 text-center">
           Nhấn Chốt bill sẽ khóa hóa đơn, phân tách phiếu trạm KDS và mở bản in để thu ngân kiểm tra.
         </p>
+      </div>
+      <div className="lg:hidden fixed bottom-0 inset-x-0 z-30 border-t border-stone-200 bg-white/95 backdrop-blur px-3 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] shadow-lg">
+        <button type="button" onClick={() => openMobilePanel(mobilePanel === 'catalog' ? 'order' : 'catalog')}
+          className="w-full flex items-center justify-between gap-3 rounded-xl bg-primary text-white px-4 py-3 font-bold text-sm">
+          <span className="flex items-center gap-2"><ShoppingBag className="h-5 w-5 shrink-0" />{mobilePanel === 'catalog' ? `Xem đơn · ${itemCount} món` : 'Tiếp tục chọn món'}</span>
+          <span className="shrink-0">{grandTotal.toLocaleString('vi-VN')} đ</span>
+        </button>
       </div>
     </div>
   );
